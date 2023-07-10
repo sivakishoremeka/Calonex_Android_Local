@@ -32,7 +32,7 @@ class LandlordPaymentListAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.transactionId.text = listPayment[position].transactionId
+        //holder.transactionId.text = listPayment[position].transactionId
         holder.propertyAdd.text = listPayment[position].propertyAddress
         holder.date.text =
             Util.convertLongToTime(listPayment[position].paymentDate.toLong(), "MMM dd, yyyy")
@@ -42,9 +42,9 @@ class LandlordPaymentListAdapter(
         holder.amount.text = listPayment[position].amount
         holder.status.text = listPayment[position].status
 
-        holder.ivCopy.setOnClickListener {
-            copyTextToClipboard(listPayment[holder.adapterPosition].transactionId)
-        }
+        //holder.ivCopy.setOnClickListener {
+        //    copyTextToClipboard(listPayment[holder.adapterPosition].transactionId)
+        //}
     }
 
     override fun getItemCount(): Int {
@@ -53,14 +53,14 @@ class LandlordPaymentListAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val propertyAdd = itemView.landlord_payment_prop_address!!
-        val transactionId = itemView.landlord_payment_id!!
+        //val transactionId = itemView.landlord_payment_id!!
         val date = itemView.landlord_payment_date!!
         val type = itemView.landlord_payment_type!!
         val unit = itemView.landlord_payment_unit!!
         val tenant_name = itemView.landlord_payment_tenant_name!!
         val amount = itemView.landlord_payment_amount!!
         val status = itemView.txt_payment_status!!
-        val ivCopy = itemView.iv_copy!!
+        //val ivCopy = itemView.iv_copy!!
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
