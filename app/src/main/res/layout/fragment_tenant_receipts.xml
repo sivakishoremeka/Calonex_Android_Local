@@ -39,6 +39,8 @@
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/profile_data_layout"
                         android:layout_width="0dp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
                         android:layout_height="wrap_content"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -61,10 +63,8 @@
                         <LinearLayout
                             android:id="@+id/linearLayout"
                             android:layout_width="wrap_content"
-
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
                             app:layout_constraintBottom_toBottomOf="@+id/calonex_logo"
@@ -78,7 +78,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/poppins"
-                                android:text="Welcome!"
+                                android:text="Payments"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_12ssp" />
 
@@ -90,7 +90,8 @@
                                 android:fontFamily="@font/poppins"
                                 android:text=""
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/_10ssp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone"/>
 
                         </LinearLayout>
 

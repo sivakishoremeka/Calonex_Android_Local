@@ -41,6 +41,8 @@
                         android:id="@+id/profile_data_layout"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
@@ -65,7 +67,6 @@
 
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
-                            android:layout_marginTop="16dp"
                             android:gravity="center_vertical"
                             android:orientation="vertical"
                             app:layout_constraintBottom_toBottomOf="@+id/calonex_logo"
@@ -91,7 +92,8 @@
                                 android:fontFamily="@font/poppins"
                                 android:text=""
                                 android:textColor="@color/white"
-                                android:textSize="@dimen/_10ssp" />
+                                android:textSize="@dimen/_10ssp"
+                                android:visibility="gone"/>
 
                         </LinearLayout>
 
