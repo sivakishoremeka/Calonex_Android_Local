@@ -1,0 +1,27 @@
+package mp.app.calonex.common.network
+
+import io.reactivex.Observable
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
+import io.reactivex.schedulers.Schedulers
+
+class CallHelperRxAPI   {
+
+    fun <T> call(observable: Observable<T>?, rxAPICallback: CallbackRxAPI<T>?): Disposable {
+        if (observable == null) {
+            throw IllegalArgumentException("Observable must not be null.")
+        }
+
+
+        if (rxAPICallback == null) {
+            throw IllegalArgumentException("Callback must not be null.")
+        }
+
+        return observable.subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe({ t -> rxAPICallback.onSuccess(t) }, { throwa ->
+                rxAPICallback.onFailed(throwa)
+            })
+
+    }
+}

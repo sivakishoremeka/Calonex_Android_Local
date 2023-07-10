@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/account_detail"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/img_app"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/logo"/>
+
+                <params.com.stepprogressview.StepProgressView
+                    android:id="@+id/step_prog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:currentProgress="6"
+                    app:markerColor="@android:color/white"
+                    app:markerWidth="3dp"
+                    app:markers="1,2,3,4,5,6,7"
+                    app:progressColor="@color/colorBlurText"
+                    app:textColor="@color/white"
+                    app:textMargin="5dp"
+                    app:textSize="11sp"
+                    app:totalProgress="7" />
+                <TextView
+                    android:id="@+id/txt_plan"
+                    style="@style/medium_poppins_text_match"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/na"
+                    android:background="@drawable/btn_dk_blue_round"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_acc"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.49"
+                        android:gravity="center"
+                        android:text="@string/bank_account"
+                        android:background="@drawable/btn_dk_blue_round"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@android:color/white"
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_weight="0.02"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/txt_card"
+                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.49"
+                        android:gravity="center"
+                        android:text="@string/credit_card"
+                        android:background="@drawable/btn_dk_grey_round"
+                        android:padding="@dimen/_8sdp"
+                        android:textColor="@android:color/white"
+                        />
+
+                </LinearLayout>
+
+                <CheckBox
+                    android:id="@+id/skip_bank_now"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:text="Skip Bank for now"
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:id="@+id/bank_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_bnk_usr_name"
+                        style="@style/small_text_match"
+
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/acc_ame"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+
+                        android:maxLength="70"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_reg_account"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="@string/bnk_account_no"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:inputType="textPassword"
+
+                    android:maxLength="16"
+                    android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_reg_cnfm_account"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/cnfm_bnk_account_no"
+                        android:imeOptions="actionNext"
+
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:inputType="textPassword|textNoSuggestions"
+
+                        android:textIsSelectable="false"
+                        android:longClickable="false"
+                        android:maxLength="16"
+                        android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_reg_routing"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/routing_no"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:inputType="numberPassword"
+                    android:maxLength="9"
+                    android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.stripe.android.view.CardInputWidget
+                    android:id="@+id/cardInputWidget"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+
+                <Button
+                    android:id="@+id/btn_account_nxt"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/blue_border"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

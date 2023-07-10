@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_16sdp">
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:text="@string/unit_desc"
+                    android:textColor="@color/colorPrimaryDark" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_unit_no"
+                        style="@style/vsmall_poppins_text_match"
+                        android:maxLength="30"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/ic_spinner_background">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_minus4sdp"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:text="@string/unit_type"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/spinner_unit_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:spinnerMode="dialog" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_rent_month"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/rent_month"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_increase_yearly"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/yearly_increase"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_application_fee"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/application_fee"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/ic_spinner_background">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_minus4sdp"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:text="@string/bathrum_type"
+                        android:visibility="visible" />
+
+                    <Spinner
+                        android:id="@+id/spinner_bathroom_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:spinnerMode="dialog" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/edit_date"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@drawable/ic_spinner_background"
+                    android:drawableEnd="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableTint="@color/black_trans"
+                    android:gravity="center_vertical"
+                    android:hint="Available From"
+                    android:inputType="date"
+                    android:maxLength="30"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColor="@android:color/black" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_square_foot"
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawablePadding="@dimen/_5sdp"
+
+                        android:hint="@string/square_footage"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="6"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/showonmarketplace"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/display_market_place_rent_cx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"></CheckBox>
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="@string/unit_feature"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_unit_feature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="@string/utility_include"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_utilities_included"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:nestedScrollingEnabled="false" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/ic_spinner_background">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_height="@dimen/_15sdp"
+                        android:layout_gravity="center_vertical|start"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_minus4sdp"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/_2sdp"
+                        android:paddingEnd="@dimen/_2sdp"
+                        android:text="@string/text_unit_status"
+                        android:visibility="visible" />
+
+
+                    <Spinner
+                        android:id="@+id/spinner_unit_status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:spinnerMode="dialog" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_unit_vacant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:visibility="gone"
+                        style="@style/small_text_wrap"
+                        android:text="@string/lease_specs"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/lease_start_date"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:background="@drawable/ic_spinner_background"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center_vertical"
+                        android:hint="Lease Start Date"
+                        android:inputType="date"
+                        android:maxLength="30"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:paddingEnd="@dimen/_7sdp"
+                        android:paddingBottom="@dimen/_7sdp"
+                        android:textColor="@android:color/black" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_security_deposit"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/security_deposit"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_months_free"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/months_free"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_discount"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/discount_new"
+                            android:inputType="numberDecimal"
+                            android:maxLength="2" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_late_fee_after_due_date"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/late_fee_after_due_date"
+                            android:inputType="numberDecimal"
+                            android:maxLength="10" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_unit_occupied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/small_text_wrap"
+                        android:text="@string/tenant_details"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tenant_first_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/tenant_first_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tenant_middle_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/tenant_middle_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            android:visibility="gone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tenant_last_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/tenant_last_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tenant_email"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/tenant_email"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="256"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_tenant_phone"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/tenant_phone"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/add_photo"
+                        style="@style/small_text_wrap"
+                        android:layout_weight="1"
+                        android:background="@drawable/ic_upload_unit_images"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_photos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp" />
+                 <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_photos_from_api"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_save_unit"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/blue_border"
+                    android:text="@string/save"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/unit_description_skip"
+                    style="@style/xmedium_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Skip for Now"
+                    android:textColor="@color/colorPrimaryDark" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/add__progress"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/upload_text_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/upload_doc"
+            android:textColor="@android:color/white" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_below="@+id/upload_text_title"
+                android:padding="@dimen/_16sdp">
+
+                <TextView
+                    android:id="@+id/btn_upload"
+                    style="@style/large_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:drawableTop="@android:drawable/ic_input_add"
+                    android:drawableTint="@color/black_trans"
+                    android:gravity="center"
+                    android:padding="@dimen/_12sdp"
+                    android:text="@string/image"
+                    android:textColor="@color/black_trans"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/btn_upload_file"
+                    style="@style/large_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:minWidth="@dimen/_80sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:layout_alignParentRight="true"
+                    android:drawableTop="@android:drawable/ic_input_add"
+                    android:drawableTint="@color/black_trans"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@string/file"
+                    android:textColor="@color/black_trans"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/upload_screen_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_300sdp"
+                    android:scaleType="centerCrop" />
+
+            </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/xsmall_text_wrap"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/btn_done"
+            style="@style/xsmall_text_wrap"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/save"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>

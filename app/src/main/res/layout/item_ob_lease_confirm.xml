@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:paddingBottom="@dimen/_5sdp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <TextView
+
+                android:id="@+id/txt_item_lc_tenant_name"
+                style="@style/vsmall_poppins_text_match"
+                android:text="@string/na"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_1sdp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:text="@string/text_rent_percent"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_item_lc_rent_prcnt"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:text="@string/text_rent_amount"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_item_lc_rent_amt"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:text="@string/text_security_amt"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_item_lc_security_amt"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:text="@string/text_tenant_type"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_item_lc_co_signer"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:gravity="center"
+                        android:text="@string/co_signer"
+                        android:textColor="@color/colorPrimaryDark" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_7sdp"
+            android:weightSum="2">
+
+            <!--     <TextView
+                     android:id="@+id/txt_item_lc_co_signer"
+                     style="@style/vsmall_poppins_text_wrap"
+                     android:layout_width="0dp"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="@dimen/_10sdp"
+                     android:layout_marginTop="@dimen/_2sdp"
+                     android:layout_marginEnd="@dimen/_5sdp"
+                     android:layout_marginBottom="@dimen/_2sdp"
+                     android:layout_weight="1"
+                     android:gravity="center"
+                     android:padding="@dimen/_5sdp"
+                     android:text="@string/co_signer"
+                     android:textColor="@color/colorPrimaryDark" />-->
+
+            <TextView
+                android:id="@+id/txt_item_lc_co_tenant"
+                style="@style/vsmall_poppins_text_wrap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/blue_border"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/co_tenant"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <ScrollView
+        android:id="@+id/rv_units"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_margin="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Are you willing to add Expenses to this Property?"/>
+
+        <LinearLayout
+            android:visibility="gone"
+           android:id="@+id/block_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spinner_1"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/spinner_2"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="visible"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_1"
+                    style="@style/vsmall_poppins_text_match"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="Gas"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:drawableTint="@color/black_trans"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="visible"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_2"
+                    style="@style/vsmall_poppins_text_match"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="Electricity"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:drawableTint="@color/black_trans"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="visible"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_3"
+                    style="@style/vsmall_poppins_text_match"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="Water"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:drawableTint="@color/black_trans"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="visible"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_4"
+                    style="@style/vsmall_poppins_text_match"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="Misc"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:drawableTint="@color/black_trans"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone"
+
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_5"
+                    style="@style/vsmall_poppins_text_match"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="Misc"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    android:visibility="gone"
+                    android:drawableTint="@color/black_trans"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+            <TextView
+                android:id="@+id/btn_reg_next"
+                style="@style/xsmall_poppins_text_match"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:gravity="center"
+                android:textColor="@color/colorGreen"
+                android:background="@drawable/blue_border"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

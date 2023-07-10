@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="5dp"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+
+    <TextView
+        android:id="@+id/txt_unit_desc_title"
+        style="@style/xsmall_poppins_text_match"
+        android:text="@string/na"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="@dimen/_4sdp"/>
+    <TextView
+        style="@style/vsmall_poppins_text_wrap"
+        android:textColor="@color/black"
+        android:text="@string/unit_feature"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_units_feature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_margin="@dimen/_5sdp"/>
+
+    <TextView
+        style="@style/vsmall_poppins_text_wrap"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textColor="@color/black"
+        android:text="@string/unit_utility" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_units_utility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_margin="@dimen/_5sdp"/>
+
+    <LinearLayout
+        android:id="@+id/layout_tenant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:padding="@dimen/_8sdp"
+        android:visibility="visible">
+
+        <TextView
+            style="@style/vsmall_poppins_text_wrap"
+            android:textColor="@color/black_trans"
+            android:text="@string/tenant_detail" />
+
+        <TextView
+            android:id="@+id/txt_ud_tenant_name"
+            style="@style/vsmall_poppins_text_wrap"
+            android:drawablePadding="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:text="@string/na" />
+
+        <TextView
+            android:id="@+id/txt_ud_tenant_email"
+            style="@style/vsmall_poppins_text_wrap"
+            android:textColor="@color/black"
+            android:text="@string/na" />
+
+        <TextView
+            android:id="@+id/txt_ud_tenant_phn"
+            style="@style/vsmall_poppins_text_wrap"
+            android:textColor="@color/black"
+            android:text="@string/na" />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

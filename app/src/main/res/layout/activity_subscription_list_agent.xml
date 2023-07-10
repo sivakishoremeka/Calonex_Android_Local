@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    style="@style/medium_poppins_text_match"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:gravity="center"
+                    android:text="@string/subscriptions"
+                    android:textColor="@android:color/white" />
+                <RelativeLayout
+                    android:id="@+id/layout_lph_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:src="@drawable/ic_notifications"
+                        app:tint="@android:color/white" />
+
+                    <TextView
+                        android:id="@+id/txt_lph_notify"
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_width="@dimen/_10sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:layout_marginTop="@dimen/_minus2sdp"
+                        android:background="@drawable/bg_small_circle_red"
+                        android:gravity="center"
+                        android:text="@string/text_zero"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_7ssp" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <SearchView
+                android:id="@+id/search_payment"
+                style="@style/vsmall_poppins_text_match"
+                android:searchIcon="@drawable/ic_search"
+                android:closeIcon="@drawable/ic_clear"
+                android:iconifiedByDefault="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="-5dp"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@android:color/white" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_12sdp"
+            android:weightSum="3"
+            android:visibility="gone">
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/layout_round_white">
+                <Spinner
+                    android:id="@+id/spinner_property"
+                    android:layout_width="match_parent"
+                    android:spinnerMode="dialog"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/layout_round_white"
+                >
+
+                <Spinner
+
+                    android:id="@+id/spinner_avail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_16sdp"
+                    android:spinnerMode="dialog"/>
+            </RelativeLayout>
+
+            <ImageView
+                android:padding="@dimen/_3sdp"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_dialog_info"
+                android:background="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_ld_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ld_payments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+    <Button
+        android:id="@+id/btn_try_again"
+        style="@style/medium_text_wrap"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_circular_rectangle_primary_fill"
+        android:text="@string/try_again"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@android:color/white"
+        android:visibility="gone"/>
+</RelativeLayout>

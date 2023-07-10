@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:focusable="true"
+android:focusableInTouchMode="true"
+    android:background="@color/white" >
+
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:id="@+id/home_welcome_title"
+            style="@style/medium_text_wrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_font"
+            android:text="Welcome!"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            style="@style/vsmall_poppins_text_wrap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center"
+            android:text="At Calonex, our goal is to simplify Tenant-Landlord payment experience by placing the tenant in control of the transaction process"
+            android:textColor="@color/colorCommonText" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_8sdp"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center"
+            android:text="At Calonex our goal is to simplify Tenant- Landlord payment experience by placing the tenant in control of the transaction process."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/home_layout_pay_rent"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/blue_border"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_18sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_18sdp"
+            android:paddingBottom="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Pay Rent"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_arrow_right_white"
+                app:tint="@color/colorLightGreen" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/home_layout_payment_setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/btn_lt_blue_round2">
+
+            <ImageView
+                android:visibility="invisible"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/payment_settings" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_font"
+                android:text="Payment Settings "
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:background="@drawable/btn_lt_blue_round2"
+            android:id="@+id/home_layout_payment_history"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_font"
+                android:text="Payment History"
+                android:textColor="@color/colorCommonText"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_layout_property_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/btn_lt_blue_round2">
+
+            <ImageView
+                android:visibility="invisible"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/property_details" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_font"
+                android:text="Property Details"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/home_layout_rate_building"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/btn_lt_blue_round2">
+
+            <ImageView
+                android:visibility="invisible"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:src="@drawable/rating" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/montserrat_font"
+                android:text="Rate Your Building"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

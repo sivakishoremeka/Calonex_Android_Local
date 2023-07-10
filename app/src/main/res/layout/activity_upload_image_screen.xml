@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/add_new_property"
+            android:textColor="@android:color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_done"
+            android:layout_below="@+id/txt_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:padding="@dimen/_16sdp">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/img_dot_corner"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/img_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/txt_tag_pic"
+                        style="@style/medium_text_wrap"
+                        android:layout_centerInParent="true"
+                        android:drawableBottom="@android:drawable/ic_input_add"
+                        android:drawableTint="@color/colorPrimary"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_title"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    android:id="@+id/btn_upload"
+                    style="@style/large_text_wrap"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:drawableTop="@android:drawable/ic_input_add"
+                    android:drawableTint="@color/black_trans"
+                    android:gravity="center"
+                    android:padding="@dimen/_15sdp"
+                    android:text="@string/add"
+                    android:textColor="@color/black_trans"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btn_done"
+            style="@style/small_poppins_text_match"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

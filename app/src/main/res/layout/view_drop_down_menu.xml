@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtDropDownLabel"
+        style="@style/vvsmall_poppins_text_match"
+        android:paddingStart="@dimen/_2sdp"
+        android:paddingTop="@dimen/_4sdp"
+        android:paddingEnd="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_4sdp"
+        android:text="@string/address" />
+
+
+</RelativeLayout>

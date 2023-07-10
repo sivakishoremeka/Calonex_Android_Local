@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/layout_btm">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/rent_distribution"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+            <TextView
+                android:id="@+id/txt_ob_unit"
+                style="@style/small_text_wrap"
+                android:text="@string/unit_no"
+                android:textColor="@color/colorPrimaryDark"
+                />
+            <TextView
+                android:id="@+id/txt_ob_property_add"
+                style="@style/small_text_wrap"
+                android:text="@string/na"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="@dimen/_2sdp"/>
+
+
+
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@color/colorLtBlk" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            >
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:text="@string/lease_specification"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                />
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLtBlk" />
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:text="@string/tenant"
+                android:textColor="@android:color/black"
+                android:layout_weight="1"
+                android:padding="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLtBlk" />
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:text="@string/rent_distribution"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimaryDark"
+
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@color/colorLtBlk" />
+
+        <ScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/medium_poppins_text_match"
+                    android:text="@string/onboarding_tenants"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_2sdp"
+                    android:weightSum="5">
+
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_match"
+                        android:layout_weight="0.8"
+                        android:gravity="center"
+                        android:text="@string/tenants"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_match"
+                        android:layout_weight="1.05"
+                        android:gravity="center"
+                        android:text="@string/rent_prcnt"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_match"
+                        android:layout_weight="1.05"
+                        android:gravity="center"
+                        android:text="@string/amnt"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_match"
+                        android:layout_weight="1.05"
+                        android:gravity="center"
+                        android:text="@string/co_signer"
+                        android:textColor="@android:color/white" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="@android:color/white" />
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_match"
+                        android:layout_weight="1.05"
+                        android:gravity="center"
+                        android:text="@string/co_tenant"
+                        android:textColor="@android:color/white" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_ob_rd_tenant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+                <TextView
+                    android:textColor="@color/black_trans"
+                    style="@style/vsmall_poppins_text_match"
+                    android:text="@string/tenant_list_note"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_16sdp"
+        android:id="@+id/layout_btm">
+
+        <Button
+            android:id="@+id/btn_rd_nxt"
+            style="@style/xsmall_poppins_text_match"
+            android:layout_gravity="center"
+            android:background="@drawable/blue_border"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

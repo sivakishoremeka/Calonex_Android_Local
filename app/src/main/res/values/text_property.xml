@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="xxlarge_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+    <style name="xxlarge_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">50sp</item>
+    </style>
+
+
+    <style name="xlarge_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="xlarge_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+
+
+    <style name="large_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="large_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+    </style>
+
+    <style name="xmedium_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="medium_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+    </style>
+
+    <style name="xsmall_poppins_text_match_commission">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+
+    <style name="xsmall_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="small_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="small_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="small_text_wrap_weight_0">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#BDB1B1</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+
+    <style name="vsmall_poppins_text_wrap_weight_0">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="vvvsmall_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="vvvsmall_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="switch_style">
+        <item name="android:textDirection">rtl</item>
+        <item name="android:switchPadding">@dimen/_8sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">10sp</item>
+        <item name="theme">@style/SwitchCompatTheme</item>
+    </style>
+
+    <style name="switch_style2">
+        <item name="android:textDirection">rtl</item>
+        <item name="android:switchPadding">@dimen/_8sdp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">10sp</item>
+        <item name="theme">@style/SwitchCompatThemeNew</item>
+    </style>
+
+    <!--New Font style -->
+    <style name="xmedium_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="xmedium_poppins_bold_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="xmedium_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="small_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="medium_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="medium_poppins_bold_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="medium_poppins_bold_text_match_blue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#007AFF</item>
+    </style>
+
+
+    <style name="medium_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+
+    <style name="x_small_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="small_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="small_manrope_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="small_manrope_text_match">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/manrope</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="vsmall_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="vvsmall_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+    <style name="vvsmall_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+
+    <style name="vsmall_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+
+    <style name="large_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_20sdp</item>
+        <item name="android:textColor">@color/black_text</item>
+    </style>
+
+
+    <style name="xsmall_poppins_text_wrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+
+    <style name="xsmall_poppins_text_match">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+    </style>
+
+
+</resources>

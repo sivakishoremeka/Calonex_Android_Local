@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/notification"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_notify"
+            style="@style/MyCustomTabText"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:tabBackground="@drawable/tab_selected_bg"
+            app:tabIndicatorColor="@android:color/white"
+            app:tabIndicatorHeight="0dp"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@android:color/darker_gray"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_notify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

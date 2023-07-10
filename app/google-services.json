@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "501272537680",
+    "project_id": "calonex-all",
+    "storage_bucket": "calonex-all.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:501272537680:android:8b3384f1c5c1ccfadf3f55",
+        "android_client_info": {
+          "package_name": "mp.app.calonex"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "501272537680-d6s4623erlp2ru4b6hilvacrfneart0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCujPMpUrGzjgs2HmoxfKo46gr_3HFdhw4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "501272537680-d6s4623erlp2ru4b6hilvacrfneart0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

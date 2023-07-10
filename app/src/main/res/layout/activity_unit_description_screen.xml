@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/add_new_unit"
+            android:textColor="@android:color/white" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_16sdp">
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:text="@string/unit_desc"
+                    android:textColor="@color/black" />
+
+
+                <EditText
+                    android:id="@+id/edit_unit_no"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:enabled="false"
+                    android:maxLength="30"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_unit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:spinnerMode="dialog" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/colorLtBlk" />
+
+                <EditText
+                    android:id="@+id/edit_rent_month"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/rent_month"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:maxLength="10" />
+
+                <EditText
+                    android:id="@+id/edit_increase_yearly"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/yearly_increase"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:maxLength="10" />
+
+                <EditText
+                    android:id="@+id/edit_application_fee"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:hint="@string/application_fee"
+                    android:inputType="number"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:maxLength="10" />
+
+                <Spinner
+                    android:id="@+id/spinner_bathroom_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:spinnerMode="dialog" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/colorLtBlk" />
+
+                <TextView
+                    android:id="@+id/edit_date"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:hint="Available From"
+                    android:inputType="date"
+                    android:maxLength="30"
+                    android:drawableTint="@color/black_trans"
+                    android:textColor="@android:color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/colorLtBlk" />
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="@string/unit_feature"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_unit_feature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:nestedScrollingEnabled="false" />
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="@string/utility_include"
+                    android:textColor="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_utilities_included"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:nestedScrollingEnabled="false" />
+
+
+                <EditText
+                    android:id="@+id/edit_square_foot"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="@string/square_footage"
+                    android:inputType="number"
+                    android:lines="1"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black_trans"
+                    android:maxLength="6" />
+
+                <Spinner
+                    android:id="@+id/spinner_unit_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:spinnerMode="dialog" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/colorLtBlk" />
+
+                <LinearLayout
+                    android:id="@+id/view_unit_vacant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/small_text_wrap"
+                        android:text="@string/lease_specs"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/lease_start_date"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                        android:hint="Lease Start Date"
+                        android:inputType="date"
+                        android:maxLength="30"
+                        android:padding="@dimen/_5sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:textColor="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.8dp"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:background="@color/colorLtBlk" />
+
+                    <EditText
+                        android:id="@+id/edit_security_deposit"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/security_deposit"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:maxLength="10" />
+
+                    <EditText
+                        android:id="@+id/edit_months_free"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/months_free"
+                        android:textColor="@color/black"
+                        android:maxLength="5"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/edit_rent_before_due_date"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/rent_before_due_date"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:maxLength="10" />
+
+                    <EditText
+                        android:id="@+id/edit_late_fee_after_due_date"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/late_fee_after_due_date"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/black"
+                        android:maxLength="10" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_unit_occupied"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/small_text_wrap"
+                        android:text="@string/tenant_details"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <EditText
+                        android:id="@+id/edit_tenant_first_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/tenant_first_name"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/edit_tenant_middle_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/tenant_middle_name"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/edit_tenant_last_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/tenant_last_name"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/edit_tenant_email"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/tenant_email"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+
+                        android:maxLines="1" />
+
+                    <EditText
+                        android:id="@+id/edit_tenant_phone"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/tenant_phone"
+                        android:textColor="@color/black"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_32sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="@style/xsmall_text_wrap"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_border"
+                        android:textColor="@color/white"
+                        android:text="@string/cancel"
+                         />
+
+                    <Button
+                        android:id="@+id/btn_save_unit"
+                        style="@style/xsmall_text_wrap"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/blue_border"
+                        android:textColor="@color/white"
+                        android:text="@string/next" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/add__progress"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

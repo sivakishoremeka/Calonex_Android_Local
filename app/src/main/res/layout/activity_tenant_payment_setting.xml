@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/header_back"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/medium_text_wrap"
+                android:layout_centerInParent="true"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/payment_setting"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:padding="@dimen/_16sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_acc"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.49"
+                android:gravity="center"
+                android:text="@string/bank_account"
+                android:background="@drawable/btn_dk_blue_round"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@android:color/white"
+                />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="0.02"
+                android:layout_height="0dp"/>
+
+            <TextView
+                android:id="@+id/txt_card"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="0.49"
+                android:gravity="center"
+                android:text="@string/credit_card"
+                android:background="@drawable/btn_dk_grey_round"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bank_part"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_charge_apply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGrey"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_info_24"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=" Bank Account or Credit card is mandatory to pay rents."
+                    android:textColor="@color/black_trans" />
+
+            </LinearLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/payment_setting_name"
+                    style="@style/vsmall_poppins_text_match"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:hint="Name on account"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/payment_setting_account_no"
+                style="@style/vsmall_poppins_text_match"
+                android:hint="Bank Account Number"
+                android:imeOptions="actionNext"
+                android:textColorHint="@color/colorCommonText"
+                android:textColor="@color/black"
+                android:inputType="numberPassword"
+                android:maxLength="17"
+
+                android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/payment_setting_routing_no"
+                style="@style/vsmall_poppins_text_match"
+                android:hint="Routing Number"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="9"
+                android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Pay"
+                    android:textColor="@color/black_trans" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/payment_setting_switch_auto_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchCompatTheme" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_charge_apply_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLightGrey"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_info_24"/>
+
+                <TextView
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Standard Credit Card usage charges may apply."
+                    android:textColor="@color/black_trans" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_name_on_card"
+                style="@style/small_text_match"
+                android:textColorHint="@color/colorCommonText"
+                android:textColor="@color/black"
+                android:hint="Name On Card"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+
+                android:maxLength="70"
+                android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.stripe.android.view.CardInputWidget
+            android:id="@+id/cardInputWidget"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+
+        <TextView
+            android:id="@+id/payment_setting_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_40sdp"
+            android:paddingRight="@dimen/_40sdp"
+            android:text="@string/update"
+            android:textColor="@color/colorLightGreen"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/pb_payment_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

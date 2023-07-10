@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="1000dp"
+    android:minHeight="1000dp"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    style="@style/medium_poppins_text_match"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+
+                    android:text="@string/tenant_details"
+                    android:textColor="@android:color/white" />
+
+                <ImageView
+                    android:id="@+id/iv_fd_close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:src="@drawable/ic_clear" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_fd_tenant_role"
+                    style="@style/medium_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Tenant Role"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fd_tenant_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. -"
+                        android:hint="@string/tenant_nme"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/edit_fd_tenant_email"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/email_add"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fd_tenant_phn"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/phn_no"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/edit_fd_tenant_address"
+                        style="@style/vsmall_poppins_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-0123456789"
+                        android:hint="@string/address"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/edit_fd_tenant_city"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/city"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textPostalAddress"
+                        android:maxLength="20"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/edit_fd_tenant_state"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/state"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textPostalAddress"
+                        android:maxLength="20"
+                        android:maxLines="5"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fd_tenant_zip"
+                        style="@style/vsmall_poppins_text_match"
+                        android:hint="@string/zip"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_fd_tenant_driving"
+                        style="@style/vsmall_poppins_text_match"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. -1234567890"
+                        android:hint="@string/driver_licence"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="9"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_graph_title"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins"
+                    android:text="@string/text_cx_score"
+                    android:textColor="@color/black_text"
+                    android:textStyle="bold" />
+
+
+                <com.github.anastr.speedviewlib.SpeedView
+                    android:id="@+id/sv_calonex_score"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="visible"
+                    app:sv_maxSpeed="333"
+                    app:sv_minSpeed="166"
+                    app:sv_speedTextColor="@color/black_text"
+                    app:sv_unitTextColor="@color/white"
+                    app:sv_unitUnderSpeedText="true"
+                    app:sv_withIndicatorLight="false"
+                    app:sv_withTremble="false" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_dot_red" />
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/poppins"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:text="@string/text_poor"
+                            android:textColor="@color/black_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_dot_yellow" />
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/poppins"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:text="@string/text_fair"
+                            android:textColor="@color/black_text" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_dot_blue" />
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/poppins"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:text="@string/text_good"
+                            android:textColor="@color/black_text" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_15sdp"
+                            android:layout_height="@dimen/_15sdp"
+                            android:background="@color/transparent"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_dot_green" />
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:fontFamily="@font/poppins"
+                            android:paddingStart="@dimen/_2sdp"
+                            android:text="@string/text_excellent"
+                            android:textColor="@color/black_text" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

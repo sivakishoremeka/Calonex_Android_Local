@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/_5sdp">
+
+
+    <ImageView
+        android:id="@+id/img_feature"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/swimming_active" />
+
+    <TextView
+        android:id="@+id/txt_parking"
+        style="@style/vvsmall_poppins_text_wrap"
+        android:layout_below="@+id/img_feature"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:gravity="center"
+        android:text="@string/na"
+        android:lines="1"
+        android:ellipsize="end"
+        android:textSize="@dimen/_10ssp" />
+
+</LinearLayout>
+
+
+
+    <!--
+    <?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/txt_parking"
+            style="@style/vsmall_poppins_text_match"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_dk_blue_round"
+            android:gravity="center"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+    -->

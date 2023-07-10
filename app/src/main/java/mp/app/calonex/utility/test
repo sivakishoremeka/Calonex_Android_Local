@@ -1,0 +1,16 @@
+[
+{"toId":"160","time":1587559102440,"byId":"1","message":"This is reandom msg"}
+{"toId":"1","time":1587560728422,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587561624819,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562124314,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562188055,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562202878,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562246508,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562400973,"byId":"160","message":"sent nw msg","subMessage":null}
+{"toId":"1","time":1587562498826,"byId":"160","message":"testing notification","subMessage":null},
+{"toId":"160","time":1588163301849,"byId":"1","message":"HI","subMessage":""},
+{"toId":"160","time":1588163313567,"byId":"1","message":"HI","subMessage":""},
+{"toId":"160","isClosed":"true","time":1588848674076,"byId":"1","message":"Message","subMessage":""},
+{"toId":"160","time":1588848694995,"byId":"1","message":"Message","subMessage":""},
+{"toId":"160","isClosed":"true","time":1588848716696,"byId":"1","message":"Message","subMessage":"Static"}
+]

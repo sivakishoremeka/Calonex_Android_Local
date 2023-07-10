@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--android:layout_below="@+id/layout_header"-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_tenant_payment_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/payment_history_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_payment_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/txt_no_data"
+        style="@style/medium_text_wrap"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_circular_rectangle_primary_fill"
+        android:padding="@dimen/_5sdp"
+        android:text="@string/no_payment"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+</RelativeLayout>

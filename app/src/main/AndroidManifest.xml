@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="mp.app.calonex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.samsung.android.bio.face.permission.USE_FACE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <application
+        android:name="mp.app.calonex.app.CxApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="LockedOrientationActivity"
+        tools:replace="android:allowBackup">
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+
+        <activity
+            android:name="mp.app.calonex.billpay.CardAndBankInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LandLordSubscriptionInvoiceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LandLordInvoicePaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.AgentOnBoardedPropertyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="mp.app.calonex.landlord.activity.RentPaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ApplicantTenantActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <!--
+ <activity
+             android:name=".landlord.activity.RegistrationNewActivity"
+             android:exported="false" />
+        -->
+        <activity
+            android:name="mp.app.calonex.landlord.activity.TermsNConditionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.GetAgentCommisionActivityBroker"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.AgentAssenedActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.ldBkAddBank.AddBankConfirmSubmitActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.ldBkAddBank.AddBankAccountInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.ldBkAddBank.AddBankPersonalInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SignupDoneActivityNew"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.NewUserConfirmDetailScreenAgent"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.NewUserDocumentScreenAgent"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.NewBrokerInfoScreenAgent"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.QuickRegistrationNewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SignupByEmailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.MarketPlacePaymentActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.MarketplaceDetails2Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.MarketplaceDetails1Activity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.QuickRegistrationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SignupDoneActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name="mp.app.calonex.tenant.activity.WebViewJava" />
+        <activity android:name="mp.app.calonex.landlord.activity.DocumentDetailScreen" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AccountDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SubscribePlanDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.SelectSubcriptionPlan"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LandlordSignScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LandlordSignUploadScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.SignUploadScreenTenant"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LeaseRequestDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.TenantLeaseRequestScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserTenantDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ObRentDistributionScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ObLeaseSpecificationScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ObTenantsScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ObLeaseConfirmScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.InviteLandlordScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserDocumentScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.FranchiseSettingsAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserConfirmDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserAccountScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserPropertyDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.UserContactDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.LoginCredentialScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.registration.activity.SelectRoleScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.UnitDescriptionDynamicTabActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ChangePasswordScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.PersonalInformationScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity android:name="mp.app.calonex.landlord.activity.TenantOnboardActivity" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPropertyUnitDetailActivityCx"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ChatActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.PropertyDetailScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.NewUnitDescriptionScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.UploadLeasingDocScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <!--
+                <activity
+                    android:name=".landlord.activity.SplashActivity"
+                    android:configChanges="orientation|keyboardHidden"
+                    android:screenOrientation="portrait">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
+                </activity>
+        -->
+        <activity
+            android:name="mp.app.calonex.landlord.activity.ForgetPasswordScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LoginScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.RegistrationNewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="mp.app.calonex.common.utility.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name="mp.app.calonex.service.FeaturesService" /> <!-- Optional -->
+        <service android:name="mp.app.calonex.service.FirebaseService" /> <!-- Optional -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@mipmap/ic_launcher" />
+
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AddNewPropertyFirstScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.HomeActivityCx"
+            android:configChanges="orientation|keyboardHidden"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.UploadImageScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.UploadDocumentScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AddNewPropertySecondScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AddNewPropertyThirdScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.UnitAddActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.NotifyScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.CxBaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.CxBaseActivity2"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPhoneAuthActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantListEditActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantVerifyUpdateDetailsFirstActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantVerifyUpdateDetailsSecondActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.RentDistributionTenantActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantLeaseAgreementActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.AddTenantActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.UploadFileScreen"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.AddBankDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.LinkRequestActionActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.SignatureUploadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.HomeActivityTenant"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.LeaseListActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantRatingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPaymentHistoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPaymentSettingActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPayRentActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPropertyDetailActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.BrokarDashboardGarphActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.dashboard.ShowGarphActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.WebViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.WebViewActivityJava"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.AgentGarphActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.VerifyAccountDetailsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.HomeActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.NotifyScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.LeaseRequestDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.PropertyDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.PersonalInformationScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.DocumentDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.AccountDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.HomeActivityBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.SubscriptionListActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.QuickRegistrationActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.QuickRegistrationActivityBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.LoginCredentialScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.SelectSubcriptionPlanNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.UserAccountScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.UserConfirmDetailScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrok.UserContactDetailScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.UserDocumentScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentBrokerRegLd.UserPropertyDetailScreenNew"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.OnboardPropertyActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.LinkPropertyAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.BookKeepingListActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agent.activity.BookKeepingItemEditActivityAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.LeaseListDetailsOptionsActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.MarketplaceActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.UserContactDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.BrokerInfoScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.UserDocumentScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.agentRegistration.UserConfirmDetailScreenAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.brokerRegistration.UserContactDetailScreenBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.brokerRegistration.BusinessInfoScreenBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.brokerRegistration.UserConfirmDetailScreenBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.SubscriptionListActivityBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.AgentsActivityBroker"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.broker.activity.InviteAgent"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.MarketplaceSignatureUploadActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.rentcx.PaymentDoneActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.LdRegBankAdd.SelectSubcriptionPlanBankAdd"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.LdRegBankAdd.UserAccountScreenBankAdd"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.TestDeepLink"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemematee" />
+        <activity
+            android:name="mp.app.calonex.LdRegBankAdd.UserConfirmDetailScreenBankAdd"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.LdRegBankAdd.VerifyAccountDetailsActivityAddBank"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SplashActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="mp.app.calonex.landlord.activity.SocialLoginCheck"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="app.calonex.com"
+                    android:pathPrefix="/social-login" />
+            </intent-filter>
+            <intent-filter  android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="https"
+                    android:host="app.calonex.com"
+                    android:pathPrefix="/social-login" />
+            </intent-filter>
+        </activity> <!-- New Activities -->
+        <activity
+            android:name="mp.app.calonex.broker.activity.AssignAgentForPropertyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AccountLinkDetailScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPayRentInvoiceActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantAccountInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPropertyHistoryScreen"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantPropertyDetailViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantLeaseDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.TenantLeaseAgreementDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.tenant.activity.LeaseDetailsForTenantsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="mp.app.calonex.landlord.activity.AllApplicantDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.stripe.android.payments.StripeBrowserLauncherActivity"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

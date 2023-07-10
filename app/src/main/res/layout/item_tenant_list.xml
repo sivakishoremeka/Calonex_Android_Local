@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_shadow_bg"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="2dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tenant_list_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat_font"
+                android:gravity="center_vertical"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/co_signer"
+                        android:textColor="@color/black_trans"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <Switch
+                        android:theme="@style/SwitchCompatThemeNew"
+                        android:id="@+id/tenant_list_is_co_signer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/co_tenant"
+                        android:textColor="@color/black_trans"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <Switch
+                        android:theme="@style/SwitchCompatThemeNew"
+                        android:id="@+id/tenant_list_is_co_tenant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="left"
+                    android:text="Rent Amount"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/tenant_list_rent"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="left"
+                    android:text="Security Deposit"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/tenant_list_security"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="center"
+                    android:text="Rent %"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/tenant_list_rent_percent"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:maxLength="5"
+                    android:maxLines="1"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:text="Landlord Approval"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/tenant_list_landlord_approval"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/btn_light_green_ractangle"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:text="Tenant Lease Signing Status"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/tenant_list_lease_signing_status"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/btn_light_blue_ractangle"
+                    android:paddingStart="@dimen/_4sdp"
+                    android:paddingEnd="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/tenant_list_edit_action_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:id="@+id/tenant_list_edit"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="@font/montserrat_font"
+                android:background="@drawable/blue_border"
+                android:gravity="center"
+                android:text="@string/edit"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_margin="@dimen/_5sdp"
+                android:id="@+id/tenant_list_remove"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:width="0dp"
+                android:fontFamily="@font/montserrat_font"
+                android:background="@drawable/blue_border"
+                android:gravity="center"
+                android:text="@string/remove"
+                android:textColor="@color/colorLightRed" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

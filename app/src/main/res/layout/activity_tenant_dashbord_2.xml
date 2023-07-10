@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:padding="@dimen/_12sdp">
+
+            <TextView
+                android:id="@+id/credit_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@drawable/blue_border"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/cash_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:gravity="end"
+                android:padding="@dimen/_5sdp"
+                android:background="@drawable/blue_border"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/data_0"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_1"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_3"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_4"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_5"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+        <TextView
+            android:id="@+id/data_6"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quick Statistics"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp"/>
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    <!--<ProgressBar
+        android:id="@+id/pb_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />-->
+
+</RelativeLayout>

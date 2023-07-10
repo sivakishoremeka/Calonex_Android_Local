@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".common.utility.CropImageActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/cropImageView_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/select_image"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/cropImageView_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:text="Cancel"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:id="@+id/cropImageView_done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/medium_margin"
+            android:padding="@dimen/small_margin"
+            android:text="Done"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <mp.app.calonex.common.utility.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cropImageView_rl"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:background="@color/black_trans"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
+        app:cropMode="circle"
+        app:frameColor="@color/colorPrimaryDark"
+        app:frameStrokeWeight="1dp"
+        app:guideColor="@color/orange"
+        app:guideShowMode="show_on_touch"
+        app:guideStrokeWeight="1dp"
+        app:handleColor="@color/orange"
+        app:handleShowMode="show_always"
+        app:handleSize="8dp"
+        app:minFrameSize="100dp"
+        app:overlayColor="@color/uncrop_color"
+        app:touchPadding="8dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

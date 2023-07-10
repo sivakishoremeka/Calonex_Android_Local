@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:nestedScrollingEnabled="true"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+
+            <TextView
+                android:id="@+id/txt_item_lrd_name"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_width="0dp"
+                android:layout_weight="4"
+                android:textSize="@dimen/_10ssp"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_item_rd_lrd_prcnt"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_width="0dp"
+                android:layout_weight="1.7"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:textSize="@dimen/_10ssp"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:id="@+id/txt_item_lrd_amt"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_width="0dp"
+                android:layout_weight="2.3"
+                android:textSize="@dimen/_10ssp"
+                android:gravity="center"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp">
+
+                <CheckBox
+                     android:visibility="gone"
+                    android:id="@+id/cb_item_lrd_co_signer"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/black"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.05"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:id="@+id/cb_item_lrd_co_tenant"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_security_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txt_item_lrd_secuity"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txt_item_lrd_deduction"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/txt_item_lrd_reason"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_weight="1.05"
+                    android:gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/black" />
+
+    </LinearLayout>
+
+
+</HorizontalScrollView>

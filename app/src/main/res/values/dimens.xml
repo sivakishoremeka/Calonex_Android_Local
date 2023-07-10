@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">@dimen/_16sdp</dimen>
+    <dimen name="activity_vertical_margin">@dimen/_16sdp</dimen>
+    <dimen name="appbar_padding">@dimen/_16sdp</dimen>
+    <dimen name="fab_margin">@dimen/_16sdp</dimen>
+    <dimen name="appbar_padding_top">@dimen/_8sdp</dimen>
+    <dimen name="property_header1">@dimen/_8sdp</dimen>
+    <dimen name="item_horizontal_margin">@dimen/_8sdp</dimen>
+    <dimen name="small_text">@dimen/_8sdp</dimen>
+    <dimen name="select_image">@dimen/_40sdp</dimen>
+    <dimen name="high_margin">@dimen/_24sdp</dimen>
+    <dimen name="small_margin">@dimen/_8sdp</dimen>
+    <dimen name="v_small_margin">@dimen/_4sdp</dimen>
+    <dimen name="medium_margin">@dimen/_16sdp</dimen>
+    <dimen name="viewpager_next_item_visible">26dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">42dp</dimen>
+
+</resources>

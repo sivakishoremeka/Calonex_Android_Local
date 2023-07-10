@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".tenant.activity.AddBankDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/payment_info_top_View"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Add Payment Info."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/payment_info_top_View">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/tabs_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/txt_acc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:background="@drawable/btn_dk_blue_round"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/bank_account"
+                    android:textColor="@android:color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.02" />
+
+                <TextView
+                    android:id="@+id/txt_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.49"
+                    android:background="@drawable/btn_dk_grey_round"
+                    android:gravity="center"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/credit_card"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <!--            <com.google.android.material.textfield.TextInputEditText-->
+            <!--                android:id="@+id/edit_bill_add"-->
+            <!--                style="@style/CustomInputLabel"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:hint="@string/building_add"-->
+            <!--                android:imeOptions="actionNext"-->
+            <!--                android:inputType="text"-->
+            <!--                android:maxLength="25"-->
+            <!--                android:maxLines="1" />-->
+
+
+            <LinearLayout
+                android:id="@+id/ll_bank_details_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/colorLightGrey"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_5sdp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="@dimen/_27sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:src="@drawable/ic_baseline_info_24" />
+
+                <TextView
+                    android:id="@+id/pay_type_info"
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Bank Account or Credit card is mandatory to pay rents"
+                    android:textColor="@color/black_trans" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/bank_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_bnk_usr_name"
+                        style="@style/small_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+
+                        android:hint="@string/acc_ame"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="70"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                    app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_reg_account"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:hint="@string/bnk_account_no"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_reg_cnfm_account"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+
+                        android:hint="@string/cnfm_bnk_account_no"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textIsSelectable="false" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_reg_routing"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/routing_no"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberPassword"
+                        android:maxLength="9"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/card_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_name_on_card"
+                        style="@style/small_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+
+                        android:hint="Name On Card"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="70"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:visibility="gone"
+                    android:id="@+id/til_card_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:visibility="gone"
+                        android:id="@+id/edit_card_no"
+                        style="@style/small_text_match"
+
+                        android:hint="Card Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="70"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:visibility="gone"
+                    android:id="@+id/til_card_valid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:visibility="gone"
+                        android:id="@+id/edit_card_valid"
+                        style="@style/small_text_match"
+
+                        android:hint="Valid upto"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="70"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.stripe.android.view.CardInputWidget
+                    android:id="@+id/cardInputWidget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_charge_apply"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/colorLightGrey"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_info_24" />
+
+                    <TextView
+                        style="@style/small_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="Standard Credit Card usage charges may apply."
+                        android:textColor="@color/black_trans" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/auto_pay_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:layout_marginEnd="@dimen/_32sdp"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:text="Auto Pay"
+                    android:textColor="@color/black_trans" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/payment_info_switch_auto_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:theme="@style/SwitchCompatThemeNew" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/payment_info_action_done"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:background="@drawable/blue_border"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_40sdp"
+                android:paddingRight="@dimen/_40sdp"
+                android:text="Confirm"
+                android:textColor="@color/colorLightGreen"
+                android:textSize="@dimen/_14sdp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar_bank"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

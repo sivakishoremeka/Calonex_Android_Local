@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/header_back"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_text_wrap"
+            android:layout_centerInParent="true"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/payments"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout_header"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:id="@+id/edit_date"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:hint="Rent for date"
+                android:inputType="date"
+                android:maxLength="30"
+                android:textColor="@android:color/black"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/rent_date"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:hint=""
+                android:textColor="@android:color/black" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/small_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Pay"
+                    android:textColor="@color/black_trans" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/payment_info_switch_auto_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:checked="true"
+                    android:clickable="false"
+                    android:theme="@style/SwitchCompatTheme" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/auto_pay_text"
+                style="@style/vsmall_poppins_text_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="Auto pay is currently enabled, you can always change your preference in Payment Setting"
+                android:textColor="@color/black" />
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/rent_info"
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:text="Total Rent Amount"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/payment_total_unit_rent"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/na"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Total Security Amount"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/payment_total_security"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:maxLines="1"
+                        android:text="@string/na"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/your_responsibility"
+                android:textColor="@color/black" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:text="Monthly Rent"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/payment_my_monthly_rent"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/na"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:text="Total Security Deposits"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/payment_my_rent_share"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:text="@string/na"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@color/grey" />
+
+            <TextView
+                android:id="@+id/no_due_text"
+                style="@style/medium_text_wrap"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:text="No dues for current month"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/bottom_pay_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/payment_payble_rent_due_date_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="start"
+                        android:text="Due Date"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/payment_payble_rent_due_date"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:text="@string/na"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:background="@color/grey" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_breakdown_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:text="Rent"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_monthly_rent"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/payment_breakdown_late_fee_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:gravity="center"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_late_fee_text"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:text="Late Fee (If Applicable)"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_late_fee"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/payment_breakdown_discount_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_discount_text"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:text="Discount"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_discount"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:text="Service Fee"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_calonex_fee"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark" />
+
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/payment_breakdown_amenities_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:layout_marginRight="@dimen/_6sdp"
+                            android:gravity="center">
+
+                            <TextView
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:text="Amenities"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/payment_breakdown_amenities"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/colorPrimaryDark" />
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/payment_breakdown_previous_due_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_6sdp"
+                                android:layout_marginTop="@dimen/_6sdp"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:gravity="center">
+
+                                <TextView
+                                    style="@style/vsmall_poppins_text_wrap"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="start"
+                                    android:text="Previous Due (If any)"
+                                    android:textColor="@color/black_trans" />
+
+                                <TextView
+                                    android:id="@+id/payment_breakdown_previous_due"
+                                    style="@style/vsmall_poppins_text_wrap"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:text="0"
+                                    android:textColor="@color/colorPrimaryDark" />
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_16sdp"
+                                android:layout_marginEnd="@dimen/_24sdp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/payment_breakdown_previous_due_breakdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_2sdp"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp" />
+
+                                <LinearLayout
+                                    android:id="@+id/payment_breakdown_previous_due_late_free_breakdown"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_10sdp"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/_2sdp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginRight="@dimen/_4sdp"
+                        android:gravity="center">
+
+                        <TextView
+                            style="@style/medium_text_wrap"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="start"
+                            android:text="Total"
+                            android:textColor="@color/black_trans" />
+
+                        <TextView
+                            android:id="@+id/payment_breakdown_amount_payable"
+                            style="@style/medium_text_wrap"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/_25sdp"
+                            android:text="0"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <ImageView
+                            android:id="@+id/img_break_down"
+                            android:layout_width="@dimen/_22sdp"
+                            android:layout_height="@dimen/_22sdp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/ic_arrow_up" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/payment_rent_paying"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:hint="@string/pay"
+                    android:inputType="numberDecimal"
+                    android:minWidth="@dimen/_100sdp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/payment_action_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:background="@drawable/blue_border"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/_40sdp"
+                    android:paddingRight="@dimen/_40sdp"
+                    android:text="@string/make_payment"
+                    android:textColor="@color/colorLightGreen"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

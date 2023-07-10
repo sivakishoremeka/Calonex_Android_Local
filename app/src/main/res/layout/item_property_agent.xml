@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_property_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:clipChildren="true">
+
+            <View
+                android:id="@+id/view_property_status"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@android:color/darker_gray"/>
+
+
+
+            <TextView
+                android:layout_weight="1.2"
+                android:id="@+id/txt_property_add"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:text="@string/na"
+                android:layout_gravity="center"
+                android:textColor="@android:color/black"/>
+
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_weight="1.8"
+                android:id="@+id/txt_tenant_req"
+                style="@style/vvsmall_poppins_text_match"
+                android:text="@string/tag_tenant_req"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@drawable/blue_border"
+                android:padding="@dimen/_5sdp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:text="@string/available_units"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/txt_revenue"
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:text="Total submitted"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/txt_property_units"
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:text="Tenants approved"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/txt_unit_occupied"
+                    style="@style/small_text_wrap"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".tenant.activity.AddBankDetailsActivity">
+
+    <!--
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/account_info"
+            android:textColor="@android:color/white" />
+    -->
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/header_back"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/txt_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/billing_info"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_16sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_prefrea"
+                style="@style/medium_poppins_text_match"
+                android:layout_weight="1.7"
+                android:padding="@dimen/_5sdp"
+
+                android:textColor="@color/black"
+                android:textStyle="bold"
+
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    style="@style/medium_poppins_text_match"
+                    android:layout_weight="1.7"
+                    android:padding="@dimen/_5sdp"
+                    android:text="Bank Details"
+                    android:textColor="@color/colorPrimaryDark" />
+
+                <ImageView
+                    android:id="@+id/iv_update_acc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.3"
+                    android:src="@android:drawable/ic_menu_edit"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_bnk_name"
+                    style="@style/small_text_match"
+                    android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+                    android:hint="@string/acc_ame"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+
+                    android:maxLength="50"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorCommonText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_account"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:endIconDrawable="@drawable/ic_password_eye"
+                app:endIconMode="password_toggle">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_acc_no"
+                    style="@style/small_text_match"
+                    android:hint="@string/account_no"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="17"
+
+
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorCommonText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_routin"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:endIconDrawable="@drawable/ic_password_eye"
+                app:endIconMode="password_toggle"
+                app:startIconCheckable="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_routing_no"
+                    style="@style/small_text_match"
+                    android:hint="@string/routing_no"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+
+                    android:maxLength="9"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/colorCommonText" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@color/colorLightGrey" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        style="@style/medium_poppins_text_match"
+                        android:layout_weight="1.7"
+                        android:padding="@dimen/_5sdp"
+                        android:text="Credit Card Details"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <!--
+                                <ImageView
+                                    android:id="@+id/iv_update_acc"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.3"
+                                    android:src="@android:drawable/ic_menu_edit" />
+                -->
+
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_name_on_card"
+                        style="@style/small_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:hint="Name On Card"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:focusable="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_card_number"
+                        style="@style/small_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+                        android:focusableInTouchMode="false"
+                        android:hint="Card Last Four Digit"
+
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+
+                        android:maxLength="18"
+
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+
+                    android:focusable="false">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_valid_upto"
+                        style="@style/small_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+                        android:focusableInTouchMode="false"
+
+                        android:hint="Valid Upto"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/colorCommonText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_acc_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/btn_acc_cancel"
+                    style="@style/xsmall_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_weight="0"
+                    android:background="@drawable/blue_border"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_acc_update"
+                    style="@style/xsmall_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_6sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/blue_border"
+                    android:padding="@dimen/_5sdp"
+                    android:text="@string/update"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/pb_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

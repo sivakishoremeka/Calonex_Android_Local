@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingEnd="@dimen/_5sdp">
+
+    <ImageView
+        android:id="@+id/img_feature"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_bed" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_20sdp"
+        android:gravity="center"
+        android:paddingStart="@dimen/_2sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:text="@string/text_dot" />
+
+    <TextView
+        android:id="@+id/txt_parking"
+        style="@style/vsmall_poppins_text_wrap"
+        android:layout_below="@+id/img_feature"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/na" />
+
+</LinearLayout>

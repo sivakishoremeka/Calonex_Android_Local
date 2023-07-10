@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="3">
+
+    <TextView
+        android:id="@+id/txt_to_usr"
+        style="@style/vsmall_poppins_text_wrap"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_5sdp"
+        android:background="@drawable/circle_lt_blue_grey"
+        android:gravity="center"
+        android:padding="@dimen/_3sdp"
+        android:text="RT"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/layout_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:id="@+id/card_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/layout_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_chat_box_left"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp">
+
+                <TextView
+                    android:id="@+id/txt_chat"
+                    style="@style/xsmall_poppins_text_wrap"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center|start"
+                    android:text="@string/cx_msg" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_chat_time"
+                style="@style/vvsmall_poppins_text_match"
+                android:layout_alignParentTop="true"
+                android:gravity="center_vertical"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/cx_msg"
+                android:textColor="@color/gray_text" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_frm_usr"
+        style="@style/vsmall_poppins_text_wrap"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_weight="0"
+        android:background="@drawable/circle_blue"
+        android:gravity="center"
+        android:padding="@dimen/_3sdp"
+        android:text="RT"
+        android:textColor="@android:color/white"
+        android:visibility="gone" />
+</LinearLayout>
+

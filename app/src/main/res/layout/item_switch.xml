@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="@dimen/_8sdp">
+
+    <Switch
+        android:id="@+id/switch_feature"
+        style="@style/switch_style2"/>
+
+    <TextView
+        style="@style/vsmall_poppins_text_wrap"
+        android:id="@+id/txt_switch"/>
+
+</LinearLayout>

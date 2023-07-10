@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_weight="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="@string/landlord_name"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/landlord_payment_tenant_name"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+           
+
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Unit Number"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/landlord_payment_unit"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Plan Charge"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/landlord_payment_amount"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+        </LinearLayout>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+             android:weightSum="3">
+            <LinearLayout
+                android:layout_weight="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Plan duration"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/landlord_payment_date"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1.20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+android:visibility="invisible"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Payment Type"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/landlord_payment_type"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Commission Received"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:id="@+id/txt_payment_status"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:padding="@dimen/_5sdp"
+            >
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_weight="1.8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="@string/address"
+                    android:textColor="@color/black_trans"/>
+
+
+                <TextView
+
+                    android:id="@+id/landlord_payment_prop_address"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="@string/na"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:visibility="gone"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Transaction Id"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/black_trans"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/landlord_payment_id"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="205ea06c-35c3"
+                    android:textColor="@color/black"/>
+                </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/iv_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="@dimen/_7sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/copy_icon_active"
+                app:tint="@color/black_trans" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+

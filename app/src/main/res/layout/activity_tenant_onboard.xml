@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_16sdp">
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="Onboarding"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="@string/late_fee_after_due_date"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_late_fee"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Lease duration"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_lease_duration"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/onbrd_tenant_lease_end_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/spinner_box"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:drawableTint="@color/black_trans"
+                android:gravity="center_vertical"
+                android:hint="Lease End Date"
+                android:inputType="date"
+                android:maxLength="30"
+                android:paddingLeft="@dimen/_8sdp"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/onbrd_tenant_lease_start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:background="@drawable/spinner_box"
+                android:drawableRight="@android:drawable/ic_menu_my_calendar"
+                android:drawableTint="@color/black_trans"
+                android:gravity="center_vertical"
+                android:hint="Lease start Date"
+                android:inputType="date"
+                android:maxLength="30"
+                android:paddingLeft="@dimen/_8sdp"
+                android:textColor="@android:color/black" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Months Free"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_months_free"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Property Id"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_property_id"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Rent Amount"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_rent_amount"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Rent Before Due Date"
+                app:boxBackgroundColor="@android:color/white"
+                android:visibility="gone">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_rentBeforeDueDate"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Security Amount"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_securityAmount"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Security Transfer To"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_securityTransferTo"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="text"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Unit Id"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_unit_id"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="Tenant Info"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Address">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_address"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-0123456789"
+
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant City">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_city"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Email Id">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_email"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-@. 0123456789"
+
+                    android:maxLength="70"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                android:hint="Driving License Number">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_license_number"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLength="9"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. -"
+
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Pay Day"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_pay_day"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Phone"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_phone"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Rent Amount"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_rent_amount_tenant"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Rent Percentage"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_rent_percentage_tenant"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Role">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_role"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Security"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_securityAmount_tenant"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant SSN"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_ssn"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="State">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_state"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant First Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_first_name"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Middle Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_middle_name"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                app:boxBackgroundColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Last Name">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_last_name"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="25"
+                    android:maxLines="1"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Tenant Zip"
+                app:boxBackgroundColor="@android:color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/onbrd_tenant_zip"
+                    style="@style/vsmall_poppins_text_match"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/onbrd_tenant_btn_cancel"
+                    style="@style/xsmall_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:background="@drawable/blue_border"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/onbrd_tenant_btn_done"
+                    style="@style/xsmall_text_wrap"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:background="@drawable/blue_border"
+                    android:text="@string/save"
+                    android:textColor="@color/white"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

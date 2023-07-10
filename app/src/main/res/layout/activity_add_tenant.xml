@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".tenant.activity.AddTenantActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/medium_poppins_text_match"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/add_tenant"
+            android:textColor="@android:color/white" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/_16sdp">
+
+                <TextView
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Tenant Role"
+                    style="@style/xmedium_text_wrap"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:src="@drawable/unit_type"
+                        app:tint="@color/black_trans" />
+
+                    <Spinner
+                        android:id="@+id/add_tenant_role_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:spinnerMode="dialog" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.8dp"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:background="@color/colorLtBlk" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_tenant_first_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/first_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_tenant_last_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/last_name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_tenant_ssn"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_4sdp"
+
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/ssn"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberPassword"
+                        android:maxLength="11"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/add_tenant_email"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/email_add"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/coTenant_view_upload_void_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:text="Upload void check"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:id="@+id/upload_void_check_view"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:background="@drawable/btn_lt_grey_round"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="@dimen/_24sdp"
+                            android:layout_height="@dimen/_24sdp"
+                            android:src="@drawable/drawable_ic_add" />
+
+                        <TextView
+                            style="@style/medium_text_wrap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_voidCheck"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/coSigner_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/add_tenant_license"
+                            style="@style/vsmall_poppins_text_match"
+                            android:textColorHint="@color/colorCommonText"
+                            android:textColor="@color/black"
+                            android:hint="@string/driving_licence"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+                            android:maxLength="9"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/add_tenant_phone"
+                            style="@style/vsmall_poppins_text_match"
+
+                            android:drawableTint="@color/black_trans"
+                            android:textColorHint="@color/colorCommonText"
+                            android:textColor="@color/black"
+                            android:hint="@string/phone"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="14"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <com.google.android.material.textfield.TextInputEditText
+
+                            android:id="@+id/add_tenant_address"
+                            style="@style/vsmall_poppins_text_match"
+                            android:textColorHint="@color/colorCommonText"
+                            android:textColor="@color/black"
+                            android:hint="@string/address"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ- 0123456789"
+
+                            android:maxLength="50"
+                            android:maxLines="1" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="Upload License"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/add_tenant_upload_licence"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:gravity="center"
+                            android:background="@drawable/btn_lt_grey_round"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/drawable_ic_add" />
+
+                            <TextView
+                                style="@style/medium_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add" />
+
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_license"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="Upload w2s"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/add_tenant_upload_w2s"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/btn_lt_grey_round"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/drawable_ic_add" />
+
+                            <TextView
+                                style="@style/medium_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add" />
+
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_w2s"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="Upload Paystub"
+                            android:textColor="@color/black" />
+
+                        <LinearLayout
+                            android:id="@+id/add_tenant_upload_paystab"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_80sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:background="@drawable/btn_lt_grey_round"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="@dimen/_24sdp"
+                                android:layout_height="@dimen/_24sdp"
+                                android:src="@drawable/drawable_ic_add" />
+
+                            <TextView
+                                style="@style/medium_text_wrap"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/add" />
+
+
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_paystubs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/add_tenant_btn_add"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/blue_border"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingRight="@dimen/_6sdp"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

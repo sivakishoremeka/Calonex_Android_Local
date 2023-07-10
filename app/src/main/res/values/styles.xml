@@ -1,0 +1,147 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="spinner_style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="strokeColor">#EEF0FE</item>
+        <item name="hintTextColor">#EEF0FE</item>
+        <item name="android:textColor">#282e35</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="endIconMode">dropdown_menu</item>
+    </style>
+
+    <style name="hintstyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#737373</item>
+        <item name="background">@color/transparent</item>
+        <item name="backgroundColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AppThemematee" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppThemeCompat" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="myTextInputLabel" parent="AppThemeCompat">
+
+        <item name="android:textColorHint">@color/colorCommonText</item>
+        <item name="colorAccent">@color/colorCommonText</item>
+        <item name="colorControlNormal">@color/colorCommonText</item>
+    </style>
+
+    <style name="CustomInputLabel" parent="AppTheme">
+
+        <item name="colorAccent">@color/colorLtBlk</item>
+    </style>
+
+    <style name="MyCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="DialogAnimationRight">
+        <item name="android:windowEnterAnimation">@anim/slide_enter_left_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_exit_right_dialog</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">11sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="AppRating" parent="@android:style/Widget.RatingBar">
+        <item name="android:minHeight">@dimen/_32sdp</item>
+        <item name="android:minWidth">@dimen/_32sdp</item>
+        <item name="android:progressDrawable">@drawable/rating_display</item>
+    </style>
+
+    <style name="SwitchCompatTheme">
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorLtGray</item>
+    </style>
+
+ <style name="SwitchCompatThemeWhite">
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlNormal">@color/colorLtGray</item>
+    </style>
+
+    <style name="SwitchCompatThemeNew">
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorLtGray</item>
+    </style>
+
+    <!--New theme added here-->
+
+    <style name="DialogSlideBottomChooseTeam" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@drawable/choose_theme_popup_bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+
+    </style>
+
+    <style name="DialogSlideBottomFullScreen" parent="Theme.MaterialComponents.Light.Dialog.Alert">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up_dialog</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_down</item>
+    </style>
+
+    <style name="OutlineTextInputLayoutStyleGrey" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#AAAAAA</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="errorTextColor">@color/colorReportRed</item>
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.Design.TextInputLayout">
+        <item name="hintTextAppearance">@style/HintText</item>
+        <item name="hintEnabled">true</item>
+        <item name="hintAnimationEnabled">true</item>
+        <item name="errorTextColor">@android:color/holo_red_light</item>
+    </style>
+
+    <style name="HintText" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorThemeGreen</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <color name="colorThemeGreen">#48AF43</color>
+</resources>

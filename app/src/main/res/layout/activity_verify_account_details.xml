@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+    android:background="@color/white"
+        tools:context=".tenant.activity.AddBankDetailsActivity">
+
+        <RelativeLayout
+            android:id="@+id/payment_info_top_View"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimaryDark">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Verify Account Info."
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+            <ImageView
+                android:id="@+id/verify_account_profile"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_account_primary" />
+        </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_below="@+id/payment_info_top_View"
+                android:orientation="vertical">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_first_deposit"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/first_deposit"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLength="50"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_2"
+                    android:layout_below="@id/edit_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tv_second_deposit"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:hint="@string/second_deposit"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="16"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+
+                    android:id="@+id/tenant_list_lease_landlord_approval_status"
+                    style="@style/medium_text_wrap"
+                    android:padding="@dimen/_5sdp"
+                    android:background="@drawable/btn_dk_grey_round_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:text="@string/vank_verification"
+                    android:textColor="@color/black_trans"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:layout_above="@+id/tv_verify_account"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_verify_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Verify"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/blue_border"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar_bank"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+    </RelativeLayout>

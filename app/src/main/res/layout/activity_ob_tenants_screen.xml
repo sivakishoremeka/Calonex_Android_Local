@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_btm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/tenants"
+            android:textColor="@android:color/white" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+            <TextView
+                android:id="@+id/txt_ob_unit"
+                style="@style/small_text_wrap"
+                android:text="@string/unit_no"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/txt_ob_property_add"
+                style="@style/small_text_wrap"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:text="@string/na"
+                android:textColor="@android:color/black" />
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@color/colorLtBlk" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/lease_specification"
+                android:textColor="@android:color/black" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLtBlk" />
+
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:padding="@dimen/_5sdp"
+                android:text="@string/tenant"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="0.6dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLtBlk" />
+
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/rent_distribution"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:layout_marginStart="@dimen/_2sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:background="@color/colorLtBlk" />
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/layout_list_tenant"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/medium_poppins_text_match"
+                        android:text="@string/onboarding_tenants"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_2sdp">
+
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_match"
+                            android:layout_weight="0.7"
+                            android:gravity="center"
+                            android:text="@string/tenants"
+                            android:textColor="@android:color/white" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_match"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:text="@string/co_signer"
+                            android:textColor="@android:color/white" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_match"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:text="@string/text_percentage"
+                            android:textColor="@android:color/white" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_match"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:text="@string/co_tenant"
+                            android:textColor="@android:color/white"
+                            android:visibility="gone" />
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_match"
+                            android:layout_weight="1.1"
+                            android:gravity="center"
+                            android:text="@string/action"
+                            android:textColor="@android:color/white" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_ob_tenant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_ob_tenant" />
+
+                    <Button
+                        android:id="@+id/btn_ob_add_tenant"
+                        style="@style/xsmall_text_wrap"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/bg_circular_rectangle_primary_fill"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/text_add_co_signer"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_ob_tenant_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_16sdp"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:id="@+id/txt_form_title"
+                        style="@style/medium_poppins_text_match"
+                        android:text="@string/primary_tenant"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_ob_co"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+
+                        <TextView
+                            android:id="@+id/txt_ob_co_signer"
+                            style="@style/vsmall_poppins_text_match"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_lt_blue_grey_round"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/co_signer"
+                            android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:id="@+id/txt_ob_co_tenant"
+                            style="@style/vsmall_poppins_text_match"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_lt_blue_grey_round"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/co_tenant"
+                            android:textColor="@android:color/black"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_email"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/email_add"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textEmailAddress"
+                            android:maxLength="30"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_phn"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/phn_no"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/tag_optional_field"
+                        android:textColor="@color/colorCommonText" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_first_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. "
+                            android:hint="@string/first_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_middle_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. "
+
+                            android:hint="@string/middle_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_last_name"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. "
+                            android:hint="@string/last_name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="25"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_rent_percentage"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="0123456789"
+                            android:hint="@string/text_rent_percentage"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_address"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-0123456789"
+
+                            android:hint="@string/address"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:maxLength="250"
+
+
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_driving_licence"
+                            style="@style/vsmall_poppins_text_match"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz. -1234567890"
+                            android:hint="@string/driving_licence"
+                            android:imeOptions="actionNext"
+                            android:inputType="textPassword"
+
+                            android:maxLength="9"
+                            android:maxLines="1"
+
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        app:endIconDrawable="@drawable/ic_password_eye"
+                        app:endIconMode="password_toggle">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edit_ob_tenant_ssn"
+                            style="@style/vsmall_poppins_text_match"
+                            android:hint="@string/ssn"
+                            android:imeOptions="actionNext"
+                            android:inputType="numberPassword"
+                            android:maxLength="11"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/colorCommonText" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/txt_ob_paystub"
+                            style="@style/small_text_wrap"
+                            android:background="@drawable/blue_border"
+                            android:drawableLeft="@drawable/drawable_ic_add"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/upload_paystub"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_ob_paystub"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:nestedScrollingEnabled="false" />
+
+                        <TextView
+                            android:id="@+id/txt_ob_w2s"
+                            style="@style/small_text_wrap"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/blue_border"
+                            android:drawableLeft="@drawable/drawable_ic_add"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/upload_w2s"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_ob_w2s"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:nestedScrollingEnabled="false" />
+
+                        <TextView
+                            android:id="@+id/txt_ob_licence"
+                            style="@style/small_text_wrap"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:background="@drawable/blue_border"
+                            android:drawableLeft="@drawable/drawable_ic_add"
+                            android:drawableTint="@color/colorPrimaryDark"
+                            android:gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="@string/upload_licence"
+                            android:textColor="@color/colorPrimaryDark" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_ob_licence"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:nestedScrollingEnabled="false" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_ob_tenant_save"
+            style="@style/xsmall_poppins_text_match"
+            android:layout_gravity="center"
+            android:background="@drawable/blue_border"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_ob_tenant_skip"
+            style="@style/xsmall_text_wrap"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/skip_for_now"
+            android:textColor="@color/colorPrimaryDark"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

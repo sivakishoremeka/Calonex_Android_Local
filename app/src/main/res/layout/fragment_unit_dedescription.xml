@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/_5sdp"
+    android:elevation="@dimen/_3sdp"
+    android:padding="@dimen/_3sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_filter_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_available_units"
+                style="@style/small_poppins_text_wrap"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentStart="true"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/text_available_unit"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_spinner_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/text_units"
+                        android:textColor="@color/colorDarkGrayText" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spn_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ic_spinner_background"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_marginStart="@dimen/_8sdp"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:paddingEnd="@dimen/_5sdp"
+                        android:text="@string/text_availability"
+                        android:textColor="@color/colorDarkGrayText" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spn_availability"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:paddingStart="@dimen/_5sdp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_units"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_filter_lay"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:contentDescription="@string/app_name"
+            tools:listitem="@layout/item_unit_description_agent" />
+
+        <ProgressBar
+            android:id="@+id/pb_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

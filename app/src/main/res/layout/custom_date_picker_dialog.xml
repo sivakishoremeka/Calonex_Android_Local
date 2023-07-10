@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:elevation="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                 android:layout_gravity="center_horizontal"
+                style="@style/vsmall_poppins_text_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Custom Date"
+                android:textColor="@color/colorBlueText"
+                android:textSize="@dimen/_16ssp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:weightSum="3"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_3sdp">
+
+                    <TextView
+                        android:id="@+id/tv_date_title"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_from_date"
+                        android:textColor="#808191"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/edit_start_date"
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_date_title"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:hint="@string/text_sample_date_format"
+                        android:maxLines="1"
+                        android:textColorHint="@color/colorCommonText"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_margin="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_2sdp">
+
+                    <TextView
+                        android:id="@+id/tv_date_title_to"
+                        style="@style/vsmall_poppins_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_to_date"
+                        android:textColor="#808191"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <TextView
+                        android:id="@+id/edit_end_date"
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_date_title_to"
+                        android:drawableRight="@drawable/ic_calendar"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:hint="@string/text_sample_date_format"
+                        android:maxLines="1"
+                        android:textColorHint="@color/colorCommonText" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_margin="@dimen/_10sdp"
+                    android:id="@+id/search_button"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_circular_rectangle_primary_fill"
+                    android:gravity="center"
+                    android:text="Search"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

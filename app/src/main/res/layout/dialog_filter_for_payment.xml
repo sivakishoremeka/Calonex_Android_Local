@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+    <TextView
+        style="@style/xsmall_poppins_text_match"
+        android:layout_centerInParent="true"
+        android:drawableEnd="@drawable/ic_calendar"
+        android:drawablePadding="@dimen/_5sdp"
+        android:paddingStart="@dimen/_5sdp"
+        android:paddingEnd="@dimen/_5sdp"
+        android:text="@string/text_filter"
+        android:textColor="@color/black_text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_date_title"
+                    style="@style/xsmall_poppins_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_start_date"
+                    android:textColor="#808191" />
+
+                <TextView
+                    android:id="@+id/edit_start_date"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_date_title"
+                    android:background="@drawable/ic_spinner_background"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/text_sample_date_format"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:textColorHint="@color/colorCommonText"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tv_date_title_to"
+                    style="@style/xsmall_poppins_text_wrap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_end_date"
+                    android:textColor="#808191" />
+
+                <TextView
+                    android:id="@+id/edit_end_date"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_date_title_to"
+                    android:background="@drawable/ic_spinner_background"
+                    android:drawableRight="@drawable/ic_calendar"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/text_sample_date_format"
+                    android:maxLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:textColorHint="@color/colorCommonText" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/xsmall_poppins_text_wrap"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@string/text_select_quarter"
+            android:textColor="@color/colorDarkGrayText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_spinner_background">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_quarter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/xsmall_poppins_text_wrap"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@string/text_property"
+            android:textColor="@color/colorDarkGrayText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_spinner_background">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_property"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+        <TextView
+            style="@style/xsmall_poppins_text_wrap"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@string/text_unit"
+            android:textColor="@color/colorDarkGrayText" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_spinner_background">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spn_unit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/btn_cancel"
+                style="@style/small_poppins_text_match"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_circular_rectangle"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/text_cancel"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/btn_apply"
+                style="@style/small_poppins_text_match"
+                android:layout_width="0dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_circular_rectangle_primary_fill"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/text_apply"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

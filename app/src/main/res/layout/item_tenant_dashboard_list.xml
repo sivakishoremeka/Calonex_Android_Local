@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_shadow_bg"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp"
+    app:cardUseCompatPadding="true"
+
+    app:cardPreventCornerOverlap="true"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/colorVryLtBlue">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_font"
+                android:gravity="center_vertical"
+                android:text="Primary Tenant: "
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tenant_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_font"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_font"
+                android:gravity="center_vertical"
+                android:text="Unit #: "
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tenant_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_font"
+                android:gravity="center_vertical"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="Monthly Rent: "
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tv_monthly_rent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="@string/na"
+            android:textColor="@color/black" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="Lease Date: "
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tv_lease_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="@string/na"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="Lease Status: "
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:textColor="@color/black" />
+        <TextView
+            android:id="@+id/tv_lease_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/montserrat_font"
+            android:gravity="center_vertical"
+            android:text="@string/na"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

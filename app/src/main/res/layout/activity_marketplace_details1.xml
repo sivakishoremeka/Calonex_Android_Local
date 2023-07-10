@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/marketplace_item_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@color/colorPrimaryDark">
+
+            <ImageView
+                android:id="@+id/header_back"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:padding="@dimen/_2sdp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Property Details"
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/property_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_150sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Property Id"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/property_id"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Unit Number"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/unit_number"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Address"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/address_str"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Description"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/description_str"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="N/A"
+                    android:textColor="@color/black_trans" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Bedrooms"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/bedroom_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Bathrooms"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/bathroom_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Area"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/area_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Rent Per Month."
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/rent_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorBlurText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Security Amount."
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/security_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorBlurText" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/colorBlurText" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Gym"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/gym_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Swimming Pool"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/sweeming_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Parking"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/parking_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Building Features"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/list_1_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorDeepGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Parking"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/list_2_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorDeepGreen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Unit Features"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/list_3_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorDeepGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:text="Utilities Included"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/list_4_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/colorDeepGreen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/property_img_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Show Property Image"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="@drawable/blue_border"
+                    android:textColor="@color/colorLightGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/unit_img_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Show Unit Image"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="@drawable/blue_border"
+                    android:textColor="@color/colorLightGreen" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/copy_link_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Copy link to clipboard"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="@drawable/blue_border"
+                    android:textColor="@color/colorLightGreen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/property_apply_text"
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Apply Now"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:background="@drawable/blue_border"
+                    android:textColor="@color/colorLightGreen" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

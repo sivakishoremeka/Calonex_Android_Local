@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_title"
+            style="@style/xsmall_poppins_text_match_commission"
+            android:text="@string/set_commission"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="@dimen/_4sdp"/>
+
+
+        <ImageView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/dollar_icon"/>
+
+
+        <TextView
+            android:id="@+id/txt_commission_description"
+            style="@style/medium_poppins_text_match"
+            android:textColor="@color/black_trans"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Commission Percent"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txt_comission_percnent"
+                style="@style/vsmall_poppins_text_match"
+                android:textColor="@color/black"
+                android:textColorHint="@color/colorCommonText"
+                android:inputType="number"
+                android:maxLength="3"
+                android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/payment_info_action_done"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:background="@drawable/blue_border"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_40sdp"
+            android:paddingRight="@dimen/_40sdp"
+            android:text="OK"
+            android:textColor="@color/colorLightGreen"
+            android:textSize="@dimen/_14sdp"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

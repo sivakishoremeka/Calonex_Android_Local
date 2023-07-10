@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_shadow_bg"
+    app:cardCornerRadius="4dp"
+    android:layout_marginTop="@dimen/_12sdp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:id="@+id/rent_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/small_text_wrap"
+            android:id="@+id/payment_history_address"
+            android:layout_width="wrap_content"
+            android:text="@string/na"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/_8sdp"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/montserrat_font"
+                    android:text="Amount"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/payment_history_amount"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/montserrat_font"
+                    android:text="Invoice Date"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/payment_history_invoice_date"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_font"
+                    android:text="Status"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/payment_history_payment_status"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/vsmall_poppins_text_wrap"
+                android:layout_gravity="start"
+                android:fontFamily="@font/montserrat_font"
+                android:text="Invoice No"
+                android:textColor="@color/black_trans" />
+
+            <TextView
+                android:id="@+id/payment_invoice_number"
+                style="@style/vvsmall_poppins_text_wrap"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.7dp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:background="@android:color/darker_gray" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

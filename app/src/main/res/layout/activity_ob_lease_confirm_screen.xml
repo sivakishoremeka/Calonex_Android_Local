@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_btm"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Lease Review"
+            android:textColor="@android:color/white" />
+
+        <TextView
+
+            android:id="@+id/txt_ob_unit"
+            style="@style/small_text_wrap"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/unit_no"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/txt_ob_property_add"
+            style="@style/small_text_wrap"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="@string/na"
+            android:textColor="@android:color/black" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_margin="@dimen/_2sdp"
+            android:background="@color/colorLtBlk" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_8sdp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:text="@string/lease_specs"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_rent_month"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_rent_mnth"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_security_deposite"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_security_amt"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_late_fee"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_late_fee"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_1sdp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_lease_start_date"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_lease_start_date"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_lease_term"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_lease_duration"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:text="@string/text_month_free"
+                                android:textColor="@color/black_trans" />
+
+                            <TextView
+                                android:id="@+id/txt_lc_lease_free_mnth"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:text="@string/na"
+                                android:textColor="@color/black" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_1sdp"
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:text="@string/text_rent_before_due_date"
+                            android:textColor="@color/black_trans" />
+
+                        <TextView
+                            android:id="@+id/txt_lc_rent_bfor_due_date"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="@string/na"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                style="@style/medium_poppins_text_match"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@string/onboarding_tenants"
+                android:textColor="@color/black" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_ob_lc_tenant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                tools:listitem="@layout/item_ob_lease_confirm" />
+
+            <TextView
+                style="@style/vsmall_poppins_text_match"
+                android:text="@string/tenant_list_note"
+                android:textColor="@color/black" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_btm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_16sdp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_lc_submit"
+            style="@style/xsmall_poppins_text_match"
+            android:layout_gravity="center"
+            android:background="@drawable/blue_border"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/pb_ob_lease_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

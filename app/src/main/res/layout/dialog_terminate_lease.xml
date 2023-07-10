@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+
+    <TextView
+        style="@style/xsmall_poppins_text_match"
+        android:text="@string/terminate_lease"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/_4sdp"/>
+
+
+
+    <TextView
+
+        style="@style/medium_poppins_text_match"
+        android:text="@string/tag_terminate"
+        android:textColor="@color/black_trans"
+        android:layout_marginTop="@dimen/_4sdp"/>
+
+
+
+</LinearLayout>
+
+

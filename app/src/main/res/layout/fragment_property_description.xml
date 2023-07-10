@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="@string/abt_proprty"
+                android:textColor="@color/black_trans"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/small_poppins_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/building_features"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_pd_about"
+                style="@style/vsmall_poppins_text_match"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/na"
+                android:textColor="@color/black" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_desc_feature"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:nestedScrollingEnabled="false" />
+
+
+            <TextView
+                style="@style/small_poppins_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/parking"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_desc_parking"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:nestedScrollingEnabled="false" />
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/property_expenses"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_desc_expense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Documents"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_proof_own"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:visibility="gone" />
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="Revenue"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="Revenue"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="Expense"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_revinew"
+                        style="@style/vsmall_poppins_text_match"
+                        android:text="$0.00"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_expense"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="$0.00"
+                        android:textColor="@color/black_trans" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/small_poppins_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/broker_contact"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_brokr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="@string/text_broker_name" />
+
+                        <TextView
+                            android:id="@+id/txt_broker_name"
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:text="@string/na" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:text="@string/text_licence_id" />
+
+                        <TextView
+                            android:id="@+id/txt_licence_id"
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:text="@string/na" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_broker_email"
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:drawableLeft="@drawable/ic_email"
+                        android:drawablePadding="@dimen/_4sdp"
+                        android:drawableTint="@color/black_text"
+                        android:gravity="center|left"
+                        android:text="@string/na" />
+
+                    <TextView
+                        android:id="@+id/txt_broker_contact"
+                        style="@style/vvsmall_poppins_text_wrap"
+                        android:drawableLeft="@drawable/ic_call"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/black_text"
+                        android:gravity="center|left"
+                        android:text="@string/na" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="@string/abt_proprty"
+                android:textColor="@color/black_trans" />
+
+            <TextView
+                android:id="@+id/txt_pd_about"
+                style="@style/vsmall_poppins_text_match"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/na"
+                />
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/building_features"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_desc_feature"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:text="@string/parking"
+                android:textColor="@color/black"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_desc_parking"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_height="match_parent"
+                android:nestedScrollingEnabled="false"/>
+
+
+
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="@string/property_expenses"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="@dimen/_5sdp"
+                android:id="@+id/rv_desc_expense"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="Documents"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/black" />
+
+<ImageView
+    android:layout_width="@dimen/_100sdp"
+    android:layout_height="@dimen/_100sdp"
+    android:id="@+id/img_proof_own"
+    android:layout_marginTop="@dimen/_8sdp"/>
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="Revenue"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="Revenue"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="Expense"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_revinew"
+                        style="@style/vsmall_poppins_text_match"
+                        android:text="$0.00"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_expense"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="$0.00"
+                        android:textColor="@color/black_trans" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                style="@style/small_text_wrap"
+                android:text="@string/broker_contact"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/black_trans" />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:id="@+id/layout_brokr"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_broker_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:text="@string/na"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/txt_broker_email"
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawableLeft="@android:drawable/sym_action_email"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/txt_broker_contact"
+                        style="@style/vsmall_poppins_text_match"
+                        android:drawableLeft="@android:drawable/stat_sys_phone_call"
+                        android:drawablePadding="@dimen/_10sdp"
+                        android:drawableTint="@color/black_trans"
+                        android:gravity="center|left"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_weight="1.3"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        style="@style/vsmall_poppins_text_match"
+                        android:text="@string/licence_id"
+                        android:textColor="@color/black_trans" />
+
+                    <TextView
+                        android:id="@+id/txt_licence_id"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@string/na"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>-->

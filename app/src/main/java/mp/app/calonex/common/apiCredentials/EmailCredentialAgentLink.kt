@@ -1,0 +1,8 @@
+package mp.app.calonex.common.apiCredentials
+
+import com.google.gson.annotations.Expose
+
+class EmailCredentialAgentLink {
+    @Expose
+    var landlordEmailId: String? = ""
+}

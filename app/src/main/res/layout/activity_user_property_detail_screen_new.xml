@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/property_detail"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_16sdp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/img_app"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/logo"/>
+
+                <params.com.stepprogressview.StepProgressView
+                    android:id="@+id/step_prog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:currentProgress="4"
+                    app:markerColor="@android:color/white"
+                    app:markerWidth="3dp"
+                    app:markers="1,2,3,4,5,6,7"
+                    app:progressColor="@color/colorBlurText"
+                    app:textColor="@color/white"
+                    app:textMargin="5dp"
+                    app:textSize="11sp"
+                    app:totalProgress="7" />
+
+                <TextView
+                    android:id="@+id/txt_plan"
+                    style="@style/medium_poppins_text_match"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/na"
+                    android:background="@drawable/btn_dk_blue_round"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@android:color/white"
+                    />
+                <CheckBox
+                    android:id="@+id/cb_reg_primary_add"
+                    style="@style/vsmall_poppins_text_match"
+                    android:text="@string/use_primary_add"/>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/edit_reg_property_address"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/address"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-0123456789"
+
+                    android:inputType="text"
+                    android:maxLength="250"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_reg_property_zip"
+                        style="@style/vsmall_poppins_text_match"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:hint="@string/zip"
+                        android:imeOptions="actionNext"
+                        android:inputType="number"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:maxLength="5"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:id="@+id/edit_reg_property_city"
+                    style="@style/vsmall_poppins_text_match"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|textPostalAddress"
+                    android:hint="@string/city"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:maxLines="1"
+                    android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:id="@+id/edit_reg_property_state"
+                        style="@style/vsmall_poppins_text_match"
+                        android:imeOptions="actionNext"
+                        android:inputType="text|textPostalAddress"
+                        android:hint="@string/state"
+                        android:textColorHint="@color/colorCommonText"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_reg_property_phn"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="@string/phn_no"
+                    android:imeOptions="actionNext"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:maxLength="14"
+                    android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_reg_brkr_agent"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:hint="@string/brkr_id"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_reg_property_unit"
+                    style="@style/vsmall_poppins_text_match"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:imeOptions="actionDone"
+                    android:hint="@string/nmbr_unit"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:text="1"
+                    android:maxLength="5"
+                    android:maxLines="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/btn_reg_property_next"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/blue_border"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

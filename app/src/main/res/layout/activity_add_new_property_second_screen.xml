@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/broker_contact"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_16sdp">
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_ba_add"
+                        style="@style/vsmall_poppins_text_match"
+                        android:maxLength="20"
+
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                        android:hint="@string/brokr_agent_id"
+                        android:layout_gravity="center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"/>
+
+
+</com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_primary_contact"
+                    style="@style/vsmall_poppins_text_match"
+                    android:enabled="false"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:hint="@string/broker_contact"
+                    android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_broker_name"
+                    android:enabled="false"
+                    android:hint="@string/broker_nm"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    style="@style/vsmall_poppins_text_match"
+                    android:maxLength="30"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_broker_phone"
+                    style="@style/vsmall_poppins_text_match"
+                    android:enabled="false"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:hint="@string/broker_phn"
+                    android:maxLength="30"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_broker_email"
+                    style="@style/vsmall_poppins_text_match"
+                    android:enabled="false"
+                    android:textColorHint="@color/colorCommonText"
+                    android:textColor="@color/black"
+                    android:hint="@string/broker_email"
+                    android:maxLength="30"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/btn_next"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:textAllCaps="false"
+                    android:background="@drawable/blue_border"
+                    android:text="@string/next"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/broker_skip"
+                    android:text="Skip"
+                    android:visibility="gone"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_11sdp"
+                    style="@style/xmedium_text_wrap"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar_broker"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

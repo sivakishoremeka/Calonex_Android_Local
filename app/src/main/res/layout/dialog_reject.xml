@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp">
+
+
+    <TextView
+        android:id="@+id/dialog_title"
+        style="@style/xsmall_poppins_text_match"
+        android:text="@string/rejct_lease"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="@dimen/_4sdp"/>
+
+
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/til_reject_terminate">
+
+    <com.google.android.material.textfield.TextInputEditText
+
+        android:id="@+id/edit_reject"
+        style="@style/vsmall_poppins_text_match"
+        android:textColor="@color/black"
+        android:textColorHint="@color/colorCommonText"
+        android:hint="@string/rejct_note"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:maxLines="2"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>
+
+

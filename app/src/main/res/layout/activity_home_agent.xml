@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_btm_line"/>
+
+    <View
+        android:id="@+id/view_btm_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black"
+        android:layout_above="@+id/btm_nav_ld"
+        android:visibility="visible"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btm_nav_ld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemBackground="@drawable/show_line_btm_nb"
+        android:background="@android:color/white"
+        app:labelVisibilityMode="unlabeled"
+        app:elevation="@dimen/_2sdp"
+        app:menu="@menu/navigation_agent"
+        app:itemIconTint="@color/select_navigation_bar"
+        app:itemTextColor="@color/select_navigation_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</RelativeLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tenant.activity.TenantVerifyUpdateDetailsSecondActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/header_back"
+                    android:layout_width="@dimen/_28sdp"
+                    android:layout_height="@dimen/_28sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:src="@drawable/ic_back_primary" />
+
+                <ImageView
+                    android:id="@+id/tenant_verify_logo"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_height="@dimen/_120sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_8sdp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/small_text_match"
+                    android:layout_gravity="left"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/tag_verify_tenant_details"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/text_upload_paystub"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="Upload Pay Stub"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/upload_paystab_view"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:src="@drawable/drawable_ic_add"
+                        app:tint="@color/black_trans" />
+
+                    <TextView
+                        style="@style/medium_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_trans"
+                        android:text="@string/add" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_paystubs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/grey"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_upload_license"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Upload Driving License"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/upload_license_view"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        app:tint="@color/black_trans"
+                        android:src="@drawable/drawable_ic_add" />
+
+                    <TextView
+                        style="@style/medium_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_trans"
+                        android:text="@string/add" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_license"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:background="@color/grey"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_upload_w2s"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="Upload w2s last 2 years"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    android:id="@+id/upload_w2s_view"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:background="@drawable/btn_lt_grey_round"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        app:tint="@color/black_trans"
+                        android:src="@drawable/drawable_ic_add" />
+
+                    <TextView
+                        style="@style/medium_text_wrap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_trans"
+                        android:text="@string/add" />
+
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_w2s"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp" />
+
+                <TextView
+                    style="@style/vvsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:text="Note : These details would be shared with landlord"
+                    android:textColor="@color/black_trans" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tenant_details_upload_action"
+                style="@style/medium_text_wrap"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:background="@drawable/blue_border"
+                android:gravity="end"
+                android:paddingLeft="@dimen/_24sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingRight="@dimen/_24sdp"
+                android:paddingBottom="@dimen/_6sdp"
+                android:text="@string/submit"
+                android:textColor="@color/colorLightGreen" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+package mp.app.calonex.tenant.model
+
+data class TenantUnitData(
+    val invoiceId: String,
+    val planName: String,
+    val duration: String,
+    val planAmount: String,
+    val discount: String,
+    val finalAmount: String,
+    val referanceNumber: String,
+    val paymentDate: String,
+    val dueDate: String,
+    val userCatalogId: String,
+    val subscriptionId: String,
+    var leaseId: String,
+    val invoiceDate: String,
+    val invoiceType: String,
+    val totalTax: String,
+    val totalCharge: String,
+    val previousOutstanding: String,
+    val dueAmount: String,
+    val status: String,
+    val mobileNo: String,
+    val emailAddress: String,
+    val name: String,
+    val propertyId: String,
+    val propertyUnitNo: String,
+    val propertyAddress: String,
+    val rentAmount: String,
+    val serviceFee: String,
+    val securityDeposit: String,
+    val paidAmount: String,
+    val paymentTransactionId: String,
+    val invoiceCharge: ArrayList<Any?>
+
+)

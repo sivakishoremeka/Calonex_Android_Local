@@ -1,0 +1,279 @@
+package mp.app.calonex.agentBrokerRegLd
+
+import android.os.Bundle
+import android.telephony.PhoneNumberUtils
+import android.text.Editable
+import android.text.InputType
+import android.text.TextWatcher
+import android.widget.Button
+import android.widget.CheckBox
+import android.widget.TextView
+import com.fasterxml.jackson.databind.DeserializationFeature
+import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
+import com.google.android.material.textfield.TextInputEditText
+import com.google.gson.Gson
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
+import mp.app.calonex.R
+import mp.app.calonex.agent.fragment.ProfileFragmentAgent.Companion.registrationPayload
+import mp.app.calonex.agent.model.RegistrationPropertyPayloadNew
+import mp.app.calonex.common.utility.Kotpref
+import mp.app.calonex.common.utility.UsPhoneNumberFormatter
+import mp.app.calonex.common.utility.Util
+import mp.app.calonex.common.utility.Util.setEditReadOnly
+import mp.app.calonex.common.utility.Util.valueMandetory
+import mp.app.calonex.landlord.model.ZipCityStateModel
+import mp.app.calonex.agentBrokerRegLd.SubscriptionPlanAdapterNew.Companion.subscriptionPayload
+import mp.app.calonex.landlord.activity.CxBaseActivity2
+import mp.app.calonex.registration.model.RegistrationPropertyPayload
+
+
+class UserPropertyDetailScreenNew : CxBaseActivity2() {
+    private var editRegPropertyAddress: TextInputEditText? = null
+    private var editRegPropertyCity: TextInputEditText? = null
+    private var editRegPropertyState: TextInputEditText? = null
+    private var editRegPropertyZipCode: TextInputEditText? = null
+    private var editRegBrokerAgent: TextInputEditText? = null
+    private var cbRegPrimaryAdd: CheckBox? = null
+    private var editRegPropertyPhnNmbr: TextInputEditText? = null
+    private var editRegPropertyUnit: TextInputEditText? = null
+    private var btnRegPropertyNext: Button? = null
+    private var txtPlan: TextView? = null
+    private var stateList = ArrayList<String>()
+    private var regPropertyAddress: String? = null
+    private var regPropertyCity: String? = null
+    private var regPropertyState: String? = null
+    private var regPropertyZipcode: String? = null
+    private var regPropertyBrkrAgent: String? = null
+    private var regPropertyPhn: String? = null
+    private var regPropertyUnit: String? = null
+    private var zcsList = ArrayList<ZipCityStateModel>()
+    private var addressCheckFlag = false
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_user_property_detail_screen_new)
+        initComponent()
+        actionComponent()
+        startHandler()
+    }
+
+    fun initComponent() {
+        txtPlan = findViewById(R.id.txt_plan)
+        txtPlan!!.text = Kotpref.planSelected
+        editRegPropertyAddress = findViewById(R.id.edit_reg_property_address)
+        editRegPropertyCity = findViewById(R.id.edit_reg_property_city)
+        editRegPropertyState = findViewById(R.id.edit_reg_property_state)
+        editRegPropertyZipCode = findViewById(R.id.edit_reg_property_zip)
+        editRegPropertyUnit = findViewById(R.id.edit_reg_property_unit)
+        cbRegPrimaryAdd = findViewById(R.id.cb_reg_primary_add)
+        editRegPropertyPhnNmbr = findViewById(R.id.edit_reg_property_phn)
+        editRegBrokerAgent = findViewById(R.id.edit_reg_brkr_agent)
+        btnRegPropertyNext = findViewById(R.id.btn_reg_property_next)
+        zcsList = Util.getZipCityStateList(applicationContext)
+        val addLineNumberFormatter = UsPhoneNumberFormatter(editRegPropertyPhnNmbr!!)
+        editRegPropertyPhnNmbr!!.addTextChangedListener(addLineNumberFormatter)
+
+        setEditReadOnly(editRegPropertyCity!!, false, InputType.TYPE_NULL)
+        setEditReadOnly(editRegPropertyState!!, false, InputType.TYPE_NULL)
+    }
+
+
+    override fun onResume() {
+        super.onResume()
+        if (Kotpref.isRegisterConfirm) {
+            val gson = Gson()
+            val jsonTutMap: String = gson.toJson(registrationPayload.userPropertyRegisterDto)
+            val mapper = jacksonObjectMapper().configure(
+                DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
+                false
+            )
+            val propertyPayload: RegistrationPropertyPayload = mapper.readValue(jsonTutMap)
+            editRegPropertyAddress!!.setText(propertyPayload.address1)
+            editRegPropertyCity!!.setText(propertyPayload.city)
+            editRegPropertyState!!.setText(propertyPayload.state)
+            editRegPropertyZipCode!!.setText(propertyPayload.zipCode)
+            editRegPropertyPhnNmbr!!.setText(
+                PhoneNumberUtils.formatNumber(
+                    propertyPayload.phoneNumber,
+                    "US"
+                )
+            )
+            //editRegBrokerAgent!!.setText(propertyPayload.brokerId)
+            editRegPropertyUnit!!.setText(propertyPayload.numberOfUnits)
+
+            btnRegPropertyNext!!.text = getString(R.string.done)
+
+            cbRegPrimaryAdd!!.isChecked = Kotpref.isPrimaryAddress
+
+        }
+    }
+
+    fun actionComponent() {
+        cbRegPrimaryAdd!!.setOnCheckedChangeListener { compoundButton, b ->
+
+            if (b) {
+                addressCheckFlag = true
+                editRegPropertyAddress!!.setText(registrationPayload.address1)
+                editRegPropertyCity!!.setText(registrationPayload.city)
+                editRegPropertyState!!.setText(registrationPayload.state)
+                editRegPropertyZipCode!!.setText(registrationPayload.zipCode)
+                editRegPropertyPhnNmbr!!.setText(
+                    PhoneNumberUtils.formatNumber(
+                        registrationPayload.phoneNumber,
+                        "US"
+                    )
+                )
+                setEditReadOnly(editRegPropertyAddress!!, false, InputType.TYPE_NULL)
+                setEditReadOnly(editRegPropertyZipCode!!, false, InputType.TYPE_NULL)
+                setEditReadOnly(editRegPropertyPhnNmbr!!, false, InputType.TYPE_NULL)
+            } else {
+                addressCheckFlag = false
+                editRegPropertyAddress!!.setText("")
+                editRegPropertyCity!!.setText("")
+                editRegPropertyState!!.setText("")
+                editRegPropertyZipCode!!.setText("")
+                editRegPropertyPhnNmbr!!.setText("")
+                setEditReadOnly(editRegPropertyAddress!!, true, InputType.TYPE_CLASS_TEXT)
+                setEditReadOnly(editRegPropertyZipCode!!, true, InputType.TYPE_CLASS_NUMBER)
+                setEditReadOnly(editRegPropertyPhnNmbr!!, true, InputType.TYPE_CLASS_NUMBER)
+            }
+
+
+        }
+        editRegPropertyZipCode?.addTextChangedListener(object : TextWatcher {
+
+            override fun afterTextChanged(s: Editable) {
+                if (editRegPropertyZipCode!!.text.toString().length > 0) {
+                    setCityState(editRegPropertyZipCode!!.text.toString().toInt())
+                }
+            }
+
+            override fun beforeTextChanged(
+                s: CharSequence, start: Int,
+                count: Int, after: Int
+            ) {
+
+            }
+
+            override fun onTextChanged(
+                s: CharSequence, start: Int,
+                before: Int, count: Int
+            ) {
+
+            }
+        })
+        btnRegPropertyNext!!.setOnClickListener {
+            validComponent()
+
+        }
+
+
+    }
+
+    private fun setCityState(valueZip: Int?) {
+        val filterList: List<ZipCityStateModel>? = zcsList.filter { it.zip == valueZip }
+        if (filterList!!.size > 0) {
+            val filterPlan: ZipCityStateModel? = filterList.get(0)
+            editRegPropertyCity!!.setText(filterPlan!!.city)
+            editRegPropertyState!!.setText(filterPlan.state)
+        } else {
+            editRegPropertyZipCode?.error = getString(R.string.error_zipcode)
+            editRegPropertyZipCode?.requestFocus()
+            editRegPropertyCity!!.setText("")
+            editRegPropertyState!!.setText("")
+            return
+        }
+
+
+    }
+
+
+    fun validComponent() {
+        regPropertyAddress = editRegPropertyAddress!!.text.toString().trim()
+        regPropertyCity = editRegPropertyCity!!.text.toString().trim()
+        regPropertyState = editRegPropertyState!!.text.toString().trim()
+        regPropertyZipcode = editRegPropertyZipCode!!.text.toString().trim()
+        //regPropertyBrkrAgent=editRegBrokerAgent!!.text.toString().trim()
+        regPropertyUnit = editRegPropertyUnit!!.text.toString().trim()
+        regPropertyPhn = editRegPropertyPhnNmbr!!.text.toString().trim()
+
+        if (valueMandetory(applicationContext, regPropertyAddress, editRegPropertyAddress!!)) {
+            return
+        }
+        if (valueMandetory(applicationContext, regPropertyZipcode, editRegPropertyZipCode!!)) {
+            return
+        }
+        if (valueMandetory(applicationContext, regPropertyCity, editRegPropertyCity!!)) {
+            return
+        }
+
+        if (valueMandetory(applicationContext, regPropertyState, editRegPropertyState!!)) {
+            return
+        }
+
+        // TODO fix number length issue
+        /*if(valueMandetory(applicationContext,regPropertyPhn,editRegPropertyPhnNmbr!!)){
+            return
+        }
+
+        if(regPropertyPhn!!.length!=14){
+            editRegPropertyPhnNmbr?.error  = getString(R.string.error_phn)
+            editRegPropertyPhnNmbr?.requestFocus()
+            return
+        }*/
+
+        /*if(regPropertyBrkrAgent!!.length>0 && regPropertyBrkrAgent!!.length!=11){
+            editRegBrokerAgent?.error  = getString(R.string.error_brkr)
+            editRegBrokerAgent?.requestFocus()
+            return
+        }*/
+        if (valueMandetory(applicationContext, regPropertyUnit, editRegPropertyUnit!!)) {
+            return
+        }
+
+
+        if (!subscriptionPayload.numberOfUnits!!.equals("100+")) {
+
+            if (regPropertyUnit!!.toInt() > subscriptionPayload.numberOfUnits!!.toInt()) {
+                editRegPropertyUnit?.error = getString(R.string.error_no_unit)
+                editRegPropertyUnit?.requestFocus()
+                return
+            }
+        }
+
+
+        var registrationPropertyPayload = RegistrationPropertyPayloadNew()
+        registrationPropertyPayload.address1 = regPropertyAddress
+        registrationPropertyPayload.city = regPropertyCity
+        registrationPropertyPayload.state = regPropertyState
+        registrationPropertyPayload.zipCode = regPropertyZipcode
+        registrationPropertyPayload.phoneNumber = regPropertyPhn!!.filter { it.isDigit() }
+        //registrationPropertyPayload.brokerId=regPropertyBrkrAgent
+        registrationPropertyPayload.numberOfUnits = regPropertyUnit!!.toIntOrNull()
+        if (addressCheckFlag) {
+            registrationPropertyPayload.isPrimaryAddress = true
+        }
+
+        val gson = Gson()
+        val valueString = gson.toJson(registrationPropertyPayload)
+        val jsonObject: JsonObject = JsonParser().parse(valueString).asJsonObject
+        registrationPayload.userPropertyRegisterDto = jsonObject
+        Kotpref.isPrimaryAddress = cbRegPrimaryAdd!!.isChecked
+        if (Kotpref.isRegisterConfirm) {
+            onBackPressed()
+        } else {
+            Util.navigationNext(this, UserDocumentScreenNew::class.java)
+        }
+
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        if (Kotpref.isRegisterConfirm) {
+            Kotpref.isRegisterConfirm = false
+
+        }
+        Util.navigationBack(this)
+    }
+}

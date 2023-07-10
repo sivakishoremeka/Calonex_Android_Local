@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/medium_poppins_text_match"
+            android:gravity="center"
+            android:layout_alignParentTop="true"
+            android:text="@string/confirm_detail"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/_8sdp"
+            android:textColor="@android:color/white"
+            />
+
+        <ScrollView
+            android:id="@+id/scrollViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/_16sdp"
+                android:layout_margin="@dimen/_16sdp">
+
+                <ImageView
+                    android:id="@+id/img_app"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:src="@drawable/logo"/>
+
+                <params.com.stepprogressview.StepProgressView
+                    android:id="@+id/step_prog"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:currentProgress="3"
+                    app:markerColor="@android:color/white"
+                    app:markerWidth="3dp"
+                    app:markers="1,2,3"
+                    app:progressColor="@color/colorBlurText"
+                    app:textColor="@color/white"
+                    app:textMargin="5dp"
+                    app:textSize="11sp"
+                    app:totalProgress="3" />
+                <TextView
+                    android:id="@+id/txt_plan"
+                    style="@style/medium_poppins_text_match"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:text="@string/na"
+                    android:background="@drawable/btn_dk_blue_round"
+                    android:padding="@dimen/_8sdp"
+                    android:textColor="@android:color/white"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/layout_acc_info"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_weight="1.5"
+                        style="@style/xmedium_poppins_text_match"
+                        android:text="@string/billing_info"
+                        android:textColor="@color/black_trans" />
+                    <ImageView
+                        android:layout_weight="0.5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="@color/black_trans" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_cnfirm_sign"
+                    style="@style/xsmall_poppins_text_match"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="Confirm"
+                    android:textAllCaps="false"
+                    android:background="@drawable/blue_border"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/pb_reg_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

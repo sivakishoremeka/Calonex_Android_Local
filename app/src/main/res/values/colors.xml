@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#039BE5</color>
+    <color name="colorPrimaryTrans">#9F18A1E4</color>
+    <color name="colorPrimaryDark2">#0071B6</color>
+    <color name="colorPrimaryDark">#1474CC</color>
+    <color name="colorPrimaryDarker">#1F5EA4</color>
+    <color name="colorAccent">#1474CC</color>
+    <color name="colorGreen">#5CB04E</color>
+    <color name="colorDkGreen">#467C25</color>
+    <color name="colorDkYellow">#F7C758</color>
+    <color name="colorLtBrown">#D4C8AA</color>
+    <color name="colorVryLtBlue">#DBECF1</color>
+    <color name="colorLtWhite">#F8FBFF</color>
+    <color name="colorLtBlk">#80000000</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="grey">#89959b</color>
+    <color name="offWhite">#f9f9f9</color>
+    <color name="colorBg">#F4FAFE</color>
+    <color name="colorLtBlueGrey">#EBEFF0</color>
+    <color name="colorLtGray">#E6E4E5</color>
+    <color name="black_trans">#99000000</color>
+    <color name="orange">#ff9900</color>
+    <color name="uncrop_color">#60000000</color>
+    <color name="colorAvailableSlot">#3AB54B</color>
+
+
+    <color name="colorCommonText">#939191</color>
+    <color name="colorGreenText">#17AE66</color>
+    <color name="colorBlurButton">#039BE5</color>
+    <color name="colorBlurText">#039BE5</color>
+    <color name="colorLightGrey">#DADDDA</color>
+    <color name="colorLightGreen">#5CB04E</color>
+    <color name="colorLightRed">#F97171</color>
+    <color name="colorLightBlue">#C4DCDF</color>
+    <color name="colorLightBlue2">#6686A0</color>
+
+    <color name="colorDeepGreen">#238A12</color>
+    <color name="colorDeepRed">#A30E0E</color>
+
+    <color name="colorBroker1">#75a8c2</color>
+    <color name="colorBroker2">#40bbbc</color>
+    <color name="colorBroker3">#2560a7</color>
+
+    <!--New Color Resource-->
+    <color name="black_text">#2D3748</color>
+    <color name="gray_text">#BABEC6</color>
+    <color name="colorDarkGrayText">#808191</color>
+    <color name="bg_green">#43DB6C</color>
+    <color name="colorBlueText">#007AFF</color>
+    <color name="colorOrangeText">#FF7D1F</color>
+    <color name="colorGreenTextNew">#087F00</color>
+    <color name="colorReportRed">#FF5B5B</color>
+    <color name="colorReportYellow">#FBBC05</color>
+    <color name="colorReportBlue">#007AFF</color>
+    <color name="colorReportGreen">#37E15D</color>
+
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:layout_marginStart="@dimen/_4sdp"
+    android:layout_marginEnd="@dimen/_12sdp"
+    android:padding="@dimen/_2sdp">
+
+    <TextView
+        android:id="@+id/item_previos_due_title"
+        style="@style/vvsmall_poppins_text_wrap"
+        android:text="title"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/item_previos_due_value"
+        style="@style/vvsmall_poppins_text_wrap"
+        android:layout_alignParentEnd="true"
+        android:text="value"
+        android:textColor="@color/colorPrimaryDark" />
+</RelativeLayout>

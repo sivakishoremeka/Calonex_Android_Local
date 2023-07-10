@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <TextView
+                android:id="@+id/txt_ud_unit_id"
+                style="@style/small_poppins_text_wrap"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/txt_tenant_lease"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingEnd="@dimen/_5sdp"
+                android:text="@string/na"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_tenant_lease"
+                style="@style/small_poppins_text_wrap"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_circular_rectangle_primary_fill"
+                android:gravity="center"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="@string/text_add_rental"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp"
+                android:textStyle="bold"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_ud_unit_id"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/txt_unit_status"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_vaccant_active"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="@string/text_vacant"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/txt_unit_cx_rent"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_cx_rent_inactive"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="@string/text_cx_rent"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/txt_unit_non_cx_rent"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_weight="1"
+                    android:drawableStart="@drawable/ic_noc_cx_rent_inactive"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:text="@string/text_non_cx_rent"
+                    android:textSize="@dimen/_10ssp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/img_unit_lease"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_below="@+id/ll_status"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/month_free"
+                android:visibility="gone"
+                app:tint="@color/black_trans" />
+
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_unit_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:background="@color/transparent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/small_poppins_text_wrap"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:paddingEnd="@dimen/_5sdp"
+            android:text="@string/text_unit_details"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_bed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/unit_type" />
+
+                <TextView
+                    android:id="@+id/txt_ud_unit_type"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_rent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/rent_month" />
+
+                <TextView
+                    android:id="@+id/txt_ud_unit_rent"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_security_amount" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="Security Amount" />
+
+                <TextView
+                    android:id="@+id/txt_sec_amount"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_sqft" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/squr_ft_ar" />
+
+                <TextView
+                    android:id="@+id/txt_ud_ft_area"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_home_available_after" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_height="match_parent"
+                    android:text="Date Available" />
+
+                <TextView
+                    android:id="@+id/txt_avail_after"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:src="@drawable/ic_bed" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:text="@string/text_dot" />
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:layout_height="match_parent"
+                    android:text="@string/bathrum_type" />
+
+                <TextView
+                    android:id="@+id/txt_ud_bathrum_type"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:paddingStart="@dimen/_3sdp"
+                    android:text="@string/na" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txt_unit_desc_title"
+                style="@style/xsmall_poppins_text_match"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/na"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="gone" />
+
+            <TextView
+                style="@style/small_poppins_text_wrap"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/unit_feature"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_units_feature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                tools:listitem="@layout/item_property_feature" />
+
+            <TextView
+                style="@style/small_poppins_text_wrap"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:gravity="center_vertical"
+                android:text="@string/unit_utility"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_units_utility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/app_name"
+                tools:listitem="@layout/item_property_feature" />
+
+            <LinearLayout
+                android:id="@+id/layout_tenant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:orientation="vertical"
+                android:padding="@dimen/_8sdp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/tenant_detail"
+                    android:textColor="@color/black_trans" />
+
+                <TextView
+                    android:id="@+id/txt_ud_tenant_name"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_ud_tenant_email"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/txt_ud_tenant_phn"
+                    style="@style/vsmall_poppins_text_wrap"
+                    android:text="@string/na"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_ud_more"
+                style="@style/small_text_wrap"
+                android:gravity="center"
+                android:text="@string/more"
+                android:textColor="@color/colorPrimaryDark" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="5dp"
+    android:background="@android:color/white"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:padding="@dimen/_5sdp">
+
+
+
+    <TextView
+        android:id="@+id/alert_message"
+        style="@style/vsmall_poppins_text_match"
+        android:text="@string/na"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:layout_weight="0.5"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/img_del_alert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@color/black" />
+
+        <TextView
+            android:id="@+id/txt_view_lease"
+            style="@style/vsmall_poppins_text_match"
+            android:text="@string/view"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+    </LinearLayout>
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>

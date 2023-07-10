@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:padding="@dimen/_12sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="Revenue" />
+
+        <Spinner
+            android:id="@+id/spinner_year"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="end"
+            android:layout_marginStart="80dp"
+            android:dropDownVerticalOffset="50dp"
+            android:gravity="end"
+            android:padding="5dp"
+            android:popupBackground="#fff"
+            android:spinnerMode="dialog" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/expenseTextview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="#2196F3"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/incomeTextview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="#4957A8"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/profitTextview"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="#1230D8"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_40sdp"/>
+
+</LinearLayout>

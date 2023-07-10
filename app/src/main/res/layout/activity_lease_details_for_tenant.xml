@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tenant.activity.LeaseDetailsForTenantsActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:background="@drawable/bg_header_bottom_rounded"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:src="@drawable/ic_back" />
+
+
+            <TextView
+                style="@style/medium_poppins_text_wrap"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/iv_back"
+                android:gravity="center_vertical"
+                android:text="@string/text_lease_agreement"
+                android:textColor="@android:color/white" />
+
+            <RelativeLayout
+                android:id="@+id/layout_lp_notify"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:background="@drawable/bg_round_for_header"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:src="@drawable/ic_bell_icon_new" />
+
+                <TextView
+                    android:id="@+id/txt_lp_notify"
+                    style="@style/vvsmall_poppins_text_wrap"
+                    android:layout_width="@dimen/_12sdp"
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:background="@drawable/bg_small_circle_red"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/_1sdp"
+                    android:text="@string/text_zero"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_7ssp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/layout_pager_image"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_260sdp">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vp_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_260sdp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/_60sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tl_indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_10sdp"
+                            android:background="@android:color/transparent"
+                            app:tabBackground="@drawable/tab_img_selector"
+                            app:tabGravity="center"
+                            app:tabIndicatorHeight="0dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_property_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_pager_image"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_minus50sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_white_top_round_corner"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_15sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:paddingBottom="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_5sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tv_property_title"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:text="@string/text_unit_id_hash"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/txt_unit_id"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_toRightOf="@+id/tv_property_title"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/na"
+                                android:textColor="@color/colorPrimary"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:text="@string/text_lease_status_title"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_lease_status"
+                                style="@style/vsmall_poppins_text_wrap"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:ellipsize="end"
+                                android:lines="1"
+                                android:text="@string/na"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txt_pd_add"
+                        style="@style/x_small_poppins_text_match"
+                        android:drawableStart="@drawable/ic_property_location"
+                        android:drawablePadding="@dimen/_5sdp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_rent_amount_title" />
+
+                        <TextView
+                            android:id="@+id/txt_rent_amount"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_late_fees" />
+
+                        <TextView
+                            android:id="@+id/txt_late_fees"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_months_free" />
+
+                        <TextView
+                            android:id="@+id/txt_months_free"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_rent_if_paid_before_due" />
+
+                        <TextView
+                            android:id="@+id/txt_rent_if_paid_before_due"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_security_deposit_title" />
+
+                        <TextView
+                            android:id="@+id/txt_security_deposit"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/ic_date"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_lease_start_date_title" />
+
+                        <TextView
+                            android:id="@+id/txt_lease_start_date"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center"
+                            android:drawableStart="@drawable/ic_date"
+                            android:drawablePadding="@dimen/_5sdp"
+                            android:text="@string/text_lease_creation_date" />
+
+                        <TextView
+                            android:id="@+id/txt_lease_creation_date"
+                            style="@style/vsmall_poppins_text_wrap"
+                            android:layout_gravity="center" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/small_manrope_text_wrap"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:text="@string/text_on_boarding_tenants"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_table_body"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_table_header"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/text_tenant_title" />
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/text_rent_percentage_title" />
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/text_amount_title" />
+
+                            <TextView
+                                style="@style/vvsmall_poppins_text_wrap"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/text_tenants" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/tenant_list_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_2sdp"
+                            android:padding="@dimen/_2sdp"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/child_tenant_list_for_lease" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1"
+                         android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="@string/text_primary_tenant" />
+
+                        <ImageView
+                            android:id="@+id/iv_tenant_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:background="@color/transparent" />
+
+                        <TextView
+                            android:id="@+id/tv_tenant_name"
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/na" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_3sdp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="@string/text_landlord_name_title" />
+
+                        <ImageView
+                            android:id="@+id/iv_landlord_signature"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_70sdp"
+                            android:background="@color/transparent" />
+
+                        <TextView
+                            android:id="@+id/tv_landlord_name"
+                            style="@style/vvsmall_poppins_text_wrap"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/na" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:id="@+id/txt_lrd_lease_terminate"
+                    style="@style/small_text_wrap"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/btn_red_round"
+                    android:padding="@dimen/_3sdp"
+                    android:text="@string/terminate_lease"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone" />
+
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <ProgressBar
+        android:id="@+id/pb_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+</RelativeLayout>
+
+
+

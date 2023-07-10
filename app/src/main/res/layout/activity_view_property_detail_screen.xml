@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:id="@+id/layout_form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        >
+
+
+
+        <TextView
+            style="@style/small_text_wrap"
+            android:layout_gravity="center"
+            android:text="@string/add_new_property"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_ba_add"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/billing_agent_id">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_ba_add"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColor="@color/black"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_primary_contact"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/primary_contact">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_primary_contact"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColor="@color/black"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_broker_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/broker_nm">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_broker_name"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColor="@color/black"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_broker_phn"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/broker_phn">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_zip"
+                        style="@style/vsmall_poppins_text_match"
+                        android:textColor="@color/black"
+                        android:maxLength="30" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/il_broker_email"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="@string/building_type">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_broker_email"
+                        style="@style/vsmall_poppins_text_match"
+                        android:digits="aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ-@. 0123456789"
+
+                        android:textColor="@color/black"
+                        android:maxLength="70" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/btn_back"
+                        style="@style/xsmall_text_wrap"
+                        android:textColor="@color/white"
+                        android:background="@drawable/blue_border"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/back"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/btn_next"
+                        style="@style/xsmall_text_wrap"
+                        android:textColor="@color/colorLightGreen"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/next"
+                        android:textStyle="bold"
+                        android:background="@drawable/blue_border"/>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
