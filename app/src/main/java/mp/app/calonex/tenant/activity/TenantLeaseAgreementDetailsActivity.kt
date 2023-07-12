@@ -92,17 +92,17 @@ class TenantLeaseAgreementDetailsActivity : CxBaseActivity2() {
             else
                 lease_agreement_discount.text = "0%"
 
-            if (findApiResponse.lateFee != null)
-                lease_agreement_late_fee.text = " $" + findApiResponse.lateFee
+            if (LeaseRequestDetailScreen.requestLeaseInfo.lateFee != null)
+                lease_agreement_late_fee.text = " $" + LeaseRequestDetailScreen.requestLeaseInfo.lateFee
             else
                 lease_agreement_late_fee.text = " $ 0"
 
-            lease_agreement_months_free.text = " : " + findApiResponse.monthsFree
+            lease_agreement_months_free.text = " : " + LeaseRequestDetailScreen.requestLeaseInfo.monthsFree
 
             try {
                 lease_agreement_lease_start_date.text =
                     " : " + mp.app.calonex.common.utility.Util.convertLongToTime(
-                        findApiResponse.leaseStartDate.toLong(), "MMM dd, yyyy"
+                        LeaseRequestDetailScreen.requestLeaseInfo.leaseStartDate.toLong(), "MMM dd, yyyy"
                     )
 
             } catch (e: Exception) {
