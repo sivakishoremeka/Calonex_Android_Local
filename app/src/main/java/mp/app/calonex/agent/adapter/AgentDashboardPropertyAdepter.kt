@@ -75,10 +75,10 @@ class AgentDashboardPropertyAdepter (
         } else {
             holder.email.text = Bp.brokerEmailID
         }
-        if (Bp.primaryContact == null || TextUtils.isEmpty(Bp.primaryContact)) {
+        if (Bp.phone == null || TextUtils.isEmpty(Bp.phone)) {
             holder.phone.text = "NA"
         } else {
-            holder.phone.text = Bp.primaryContact
+            holder.phone.text = Bp.phone
         }
 
         if (Bp.landlordFullName == null || TextUtils.isEmpty(Bp.landlordFullName)) {
